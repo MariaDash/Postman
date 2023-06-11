@@ -1,0 +1,2457 @@
+{
+  "collection": {
+    "_": {
+      "postman_id": "8cfe5f66-954b-4f92-b649-d03955923293"
+    },
+    "item": [
+      {
+        "id": "242b5b6d-8a3e-4499-a9b1-e58c7a58ea65",
+        "name": "EP_1_get_method",
+        "request": {
+          "url": {
+            "path": [
+              "get_method"
+            ],
+            "host": [
+              "{{url}}"
+            ],
+            "query": [
+              {
+                "key": "name",
+                "value": "Mariia"
+              },
+              {
+                "key": "age",
+                "value": "35"
+              }
+            ],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "response": [],
+        "event": [
+          {
+            "listen": "test",
+            "script": {
+              "id": "dc352b12-d37f-45ab-97bf-f76485252807",
+              "type": "text/javascript",
+              "exec": [
+                ""
+              ],
+              "_lastExecutionId": "e7da513a-de06-4b0f-9047-72e0e2bd3333"
+            }
+          }
+        ],
+        "protocolProfileBehavior": {
+          "disableBodyPruning": true
+        }
+      },
+      {
+        "id": "73a766c2-7236-4829-b07b-54583d3b1d27",
+        "name": "EP_2_user_info_3",
+        "request": {
+          "url": {
+            "path": [
+              "user_info_3"
+            ],
+            "host": [
+              "{{url}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "method": "POST",
+          "body": {
+            "mode": "formdata",
+            "formdata": [
+              {
+                "key": "name",
+                "value": "Mariia",
+                "type": "text"
+              },
+              {
+                "key": "age",
+                "value": "35",
+                "type": "text"
+              },
+              {
+                "key": "salary",
+                "value": "1500",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        "response": [],
+        "event": [],
+        "protocolProfileBehavior": {
+          "disableBodyPruning": true
+        }
+      },
+      {
+        "id": "2e205b5a-2f7d-4897-8e32-28b55c232de9",
+        "name": "EP_3_object_info_1",
+        "request": {
+          "url": {
+            "path": [
+              "object_info_1"
+            ],
+            "host": [
+              "{{url}}"
+            ],
+            "query": [
+              {
+                "key": "name",
+                "value": "Mariia"
+              },
+              {
+                "key": "age",
+                "value": "35"
+              },
+              {
+                "key": "weight",
+                "value": "56"
+              }
+            ],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "response": [],
+        "event": [],
+        "protocolProfileBehavior": {
+          "disableBodyPruning": true
+        }
+      },
+      {
+        "id": "ee1a09da-3891-4478-912e-d4f1e494a380",
+        "name": "EP_4_object_info_2",
+        "request": {
+          "url": {
+            "path": [
+              "object_info_2"
+            ],
+            "host": [
+              "{{url}}"
+            ],
+            "query": [
+              {
+                "key": "name",
+                "value": "Mariia"
+              },
+              {
+                "key": "age",
+                "value": "35"
+              },
+              {
+                "key": "salary",
+                "value": "1500"
+              }
+            ],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "response": [],
+        "event": [],
+        "protocolProfileBehavior": {
+          "disableBodyPruning": true
+        }
+      },
+      {
+        "id": "0f6cd6c3-e7c5-4ce3-8ac4-ff62bdbc5ebc",
+        "name": "EP_5_object_info_3",
+        "request": {
+          "url": {
+            "path": [
+              "object_info_3"
+            ],
+            "host": [
+              "{{url}}"
+            ],
+            "query": [
+              {
+                "key": "name",
+                "value": "Mariia"
+              },
+              {
+                "key": "age",
+                "value": "35"
+              },
+              {
+                "key": "salary",
+                "value": "1500"
+              }
+            ],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "response": [],
+        "event": [],
+        "protocolProfileBehavior": {
+          "disableBodyPruning": true
+        }
+      },
+      {
+        "id": "6d84dd1d-8532-4d22-9dc7-2893396292d5",
+        "name": "EP_6_object_info_4",
+        "request": {
+          "url": {
+            "path": [
+              "object_info_4"
+            ],
+            "host": [
+              "{{url}}"
+            ],
+            "query": [
+              {
+                "key": "name",
+                "value": "Mariia"
+              },
+              {
+                "key": "age",
+                "value": "35"
+              },
+              {
+                "key": "salary",
+                "value": "1500"
+              }
+            ],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "response": [],
+        "event": [],
+        "protocolProfileBehavior": {
+          "disableBodyPruning": true
+        }
+      },
+      {
+        "id": "b82a3c37-cb60-4d03-b3e2-7a6af8ec099e",
+        "name": "EP_7_user_info_2",
+        "request": {
+          "url": {
+            "path": [
+              "user_info_2"
+            ],
+            "host": [
+              "{{url}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "method": "POST",
+          "body": {
+            "mode": "formdata",
+            "formdata": [
+              {
+                "key": "name",
+                "value": "Mariia",
+                "type": "text"
+              },
+              {
+                "key": "age",
+                "value": "35",
+                "type": "text"
+              },
+              {
+                "key": "salary",
+                "value": "1500",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        "response": [],
+        "event": [],
+        "protocolProfileBehavior": {
+          "disableBodyPruning": true
+        }
+      }
+    ],
+    "event": [
+      {
+        "listen": "prerequest",
+        "script": {
+          "id": "91579ed0-22d2-4ab2-9c04-cb28fe8b70ae",
+          "type": "text/javascript",
+          "exec": [
+            ""
+          ],
+          "_lastExecutionId": "25cd0632-2df4-4eab-a7c5-f213b54fb181"
+        }
+      },
+      {
+        "listen": "test",
+        "script": {
+          "id": "50fdc057-b40e-44aa-b850-bfe41ea80fee",
+          "type": "text/javascript",
+          "exec": [
+            "pm.test(\"Status code is 200\", function () {",
+            "    pm.response.to.have.status(200);",
+            "});"
+          ],
+          "_lastExecutionId": "1618845b-84ec-404e-86d9-f858e1b73ba5"
+        }
+      }
+    ],
+    "variable": [],
+    "info": {
+      "_postman_id": "8cfe5f66-954b-4f92-b649-d03955923293",
+      "name": "Postman 1",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    }
+  },
+  "environment": {
+    "_": {
+      "postman_variable_scope": "environment",
+      "postman_exported_at": "2023-06-09T15:03:45.024Z",
+      "postman_exported_using": "Postman/10.14.9"
+    },
+    "id": "b9a733b6-9977-4499-ba45-672f9d567643",
+    "name": "Env1",
+    "values": [
+      {
+        "type": "any",
+        "value": "http://162.55.220.72:5007",
+        "key": "url"
+      },
+      {
+        "type": "any",
+        "value": "Mariia",
+        "key": "name"
+      },
+      {
+        "type": "any",
+        "value": "35",
+        "key": "age"
+      },
+      {
+        "type": "any",
+        "value": "1500",
+        "key": "salary"
+      }
+    ]
+  },
+  "globals": {
+    "id": "e2bfbc07-fe7a-4c0c-ab19-195713552e4a",
+    "values": []
+  },
+  "run": {
+    "stats": {
+      "iterations": {
+        "total": 1,
+        "pending": 0,
+        "failed": 0
+      },
+      "items": {
+        "total": 7,
+        "pending": 0,
+        "failed": 0
+      },
+      "scripts": {
+        "total": 15,
+        "pending": 0,
+        "failed": 0
+      },
+      "prerequests": {
+        "total": 7,
+        "pending": 0,
+        "failed": 0
+      },
+      "requests": {
+        "total": 7,
+        "pending": 0,
+        "failed": 0
+      },
+      "tests": {
+        "total": 7,
+        "pending": 0,
+        "failed": 0
+      },
+      "assertions": {
+        "total": 7,
+        "pending": 0,
+        "failed": 0
+      },
+      "testScripts": {
+        "total": 8,
+        "pending": 0,
+        "failed": 0
+      },
+      "prerequestScripts": {
+        "total": 7,
+        "pending": 0,
+        "failed": 0
+      }
+    },
+    "timings": {
+      "responseAverage": 150,
+      "responseMin": 132,
+      "responseMax": 192,
+      "responseSd": 18.539533050060506,
+      "dnsAverage": 0,
+      "dnsMin": 0,
+      "dnsMax": 0,
+      "dnsSd": 0,
+      "firstByteAverage": 0,
+      "firstByteMin": 0,
+      "firstByteMax": 0,
+      "firstByteSd": 0,
+      "started": 1686385331004,
+      "completed": 1686385332814
+    },
+    "executions": [
+      {
+        "cursor": {
+          "position": 0,
+          "iteration": 0,
+          "length": 7,
+          "cycles": 1,
+          "empty": false,
+          "eof": false,
+          "bof": true,
+          "cr": false,
+          "ref": "10ca2e41-ad72-4b27-bacb-9719f1972e26",
+          "httpRequestId": "7742f8f3-e433-40dd-a1a5-8488a46cf008"
+        },
+        "item": {
+          "id": "242b5b6d-8a3e-4499-a9b1-e58c7a58ea65",
+          "name": "EP_1_get_method",
+          "request": {
+            "url": {
+              "path": [
+                "get_method"
+              ],
+              "host": [
+                "{{url}}"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "Mariia"
+                },
+                {
+                  "key": "age",
+                  "value": "35"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "dc352b12-d37f-45ab-97bf-f76485252807",
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ],
+                "_lastExecutionId": "e7da513a-de06-4b0f-9047-72e0e2bd3333"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "5007",
+            "path": [
+              "get_method"
+            ],
+            "host": [
+              "162",
+              "55",
+              "220",
+              "72"
+            ],
+            "query": [
+              {
+                "key": "name",
+                "value": "Mariia"
+              },
+              {
+                "key": "age",
+                "value": "35"
+              }
+            ],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.29.0",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "9a3c5477-5f0d-4114-a2eb-03f94ca2d42a",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "162.55.220.72:5007",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "GET"
+        },
+        "response": {
+          "id": "65d12015-9d95-4c69-9bba-1b89db4f8dfb",
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "16"
+            },
+            {
+              "key": "Server",
+              "value": "Werkzeug/2.0.1 Python/3.8.10"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 10 Jun 2023 08:20:53 GMT"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              91,
+              34,
+              77,
+              97,
+              114,
+              105,
+              105,
+              97,
+              34,
+              44,
+              34,
+              51,
+              53,
+              34,
+              93,
+              10
+            ]
+          },
+          "cookie": [],
+          "responseTime": 192,
+          "responseSize": 16
+        },
+        "id": "242b5b6d-8a3e-4499-a9b1-e58c7a58ea65",
+        "assertions": [
+          {
+            "assertion": "Status code is 200",
+            "skipped": false
+          }
+        ]
+      },
+      {
+        "cursor": {
+          "ref": "381fea95-597a-43e6-9549-172bc42e11cb",
+          "length": 7,
+          "cycles": 1,
+          "position": 1,
+          "iteration": 0,
+          "httpRequestId": "8ff855e2-1247-476f-b7a9-a054dc7c8ce7"
+        },
+        "item": {
+          "id": "73a766c2-7236-4829-b07b-54583d3b1d27",
+          "name": "EP_2_user_info_3",
+          "request": {
+            "url": {
+              "path": [
+                "user_info_3"
+              ],
+              "host": [
+                "{{url}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Mariia",
+                  "type": "text"
+                },
+                {
+                  "key": "age",
+                  "value": "35",
+                  "type": "text"
+                },
+                {
+                  "key": "salary",
+                  "value": "1500",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "5007",
+            "path": [
+              "user_info_3"
+            ],
+            "host": [
+              "162",
+              "55",
+              "220",
+              "72"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.29.0",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "5e104d5d-bb71-4370-9158-ab5b2fb70b85",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "162.55.220.72:5007",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            },
+            {
+              "key": "Content-Length",
+              "value": "378",
+              "system": true
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "formdata",
+            "formdata": [
+              {
+                "key": "name",
+                "value": "Mariia",
+                "type": "text"
+              },
+              {
+                "key": "age",
+                "value": "35",
+                "type": "text"
+              },
+              {
+                "key": "salary",
+                "value": "1500",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        "response": {
+          "id": "9fc48d53-5a03-4575-948d-7138f613ee87",
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "116"
+            },
+            {
+              "key": "Server",
+              "value": "Werkzeug/2.0.1 Python/3.8.10"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 10 Jun 2023 08:20:53 GMT"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              97,
+              103,
+              101,
+              34,
+              58,
+              34,
+              51,
+              53,
+              34,
+              44,
+              34,
+              102,
+              97,
+              109,
+              105,
+              108,
+              121,
+              34,
+              58,
+              123,
+              34,
+              99,
+              104,
+              105,
+              108,
+              100,
+              114,
+              101,
+              110,
+              34,
+              58,
+              91,
+              91,
+              34,
+              65,
+              108,
+              101,
+              120,
+              34,
+              44,
+              50,
+              52,
+              93,
+              44,
+              91,
+              34,
+              75,
+              97,
+              116,
+              101,
+              34,
+              44,
+              49,
+              50,
+              93,
+              93,
+              44,
+              34,
+              117,
+              95,
+              115,
+              97,
+              108,
+              97,
+              114,
+              121,
+              95,
+              49,
+              95,
+              53,
+              95,
+              121,
+              101,
+              97,
+              114,
+              34,
+              58,
+              54,
+              48,
+              48,
+              48,
+              125,
+              44,
+              34,
+              110,
+              97,
+              109,
+              101,
+              34,
+              58,
+              34,
+              77,
+              97,
+              114,
+              105,
+              105,
+              97,
+              34,
+              44,
+              34,
+              115,
+              97,
+              108,
+              97,
+              114,
+              121,
+              34,
+              58,
+              49,
+              53,
+              48,
+              48,
+              125,
+              10
+            ]
+          },
+          "cookie": [],
+          "responseTime": 146,
+          "responseSize": 116
+        },
+        "id": "73a766c2-7236-4829-b07b-54583d3b1d27",
+        "assertions": [
+          {
+            "assertion": "Status code is 200",
+            "skipped": false
+          }
+        ]
+      },
+      {
+        "cursor": {
+          "ref": "b5c4f699-a6fb-4d18-a082-6132ee01bc79",
+          "length": 7,
+          "cycles": 1,
+          "position": 2,
+          "iteration": 0,
+          "httpRequestId": "bf935aa7-7233-4d26-87b6-d5ee991d1eb5"
+        },
+        "item": {
+          "id": "2e205b5a-2f7d-4897-8e32-28b55c232de9",
+          "name": "EP_3_object_info_1",
+          "request": {
+            "url": {
+              "path": [
+                "object_info_1"
+              ],
+              "host": [
+                "{{url}}"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "Mariia"
+                },
+                {
+                  "key": "age",
+                  "value": "35"
+                },
+                {
+                  "key": "weight",
+                  "value": "56"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "5007",
+            "path": [
+              "object_info_1"
+            ],
+            "host": [
+              "162",
+              "55",
+              "220",
+              "72"
+            ],
+            "query": [
+              {
+                "key": "name",
+                "value": "Mariia"
+              },
+              {
+                "key": "age",
+                "value": "35"
+              },
+              {
+                "key": "weight",
+                "value": "56"
+              }
+            ],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.29.0",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "47094599-2caf-4456-ac9c-efd5ea9ad630",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "162.55.220.72:5007",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "GET"
+        },
+        "response": {
+          "id": "31ce2baf-d056-4967-8fce-fa28ba847092",
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "66"
+            },
+            {
+              "key": "Server",
+              "value": "Werkzeug/2.0.1 Python/3.8.10"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 10 Jun 2023 08:20:54 GMT"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              97,
+              103,
+              101,
+              34,
+              58,
+              51,
+              53,
+              44,
+              34,
+              100,
+              97,
+              105,
+              108,
+              121,
+              95,
+              102,
+              111,
+              111,
+              100,
+              34,
+              58,
+              48,
+              46,
+              54,
+              55,
+              50,
+              44,
+              34,
+              100,
+              97,
+              105,
+              108,
+              121,
+              95,
+              115,
+              108,
+              101,
+              101,
+              112,
+              34,
+              58,
+              49,
+              52,
+              48,
+              46,
+              48,
+              44,
+              34,
+              110,
+              97,
+              109,
+              101,
+              34,
+              58,
+              34,
+              77,
+              97,
+              114,
+              105,
+              105,
+              97,
+              34,
+              125,
+              10
+            ]
+          },
+          "cookie": [],
+          "responseTime": 146,
+          "responseSize": 66
+        },
+        "id": "2e205b5a-2f7d-4897-8e32-28b55c232de9",
+        "assertions": [
+          {
+            "assertion": "Status code is 200",
+            "skipped": false
+          }
+        ]
+      },
+      {
+        "cursor": {
+          "ref": "94b4e5ae-df32-4e0c-9016-67b06b1e0a16",
+          "length": 7,
+          "cycles": 1,
+          "position": 3,
+          "iteration": 0,
+          "httpRequestId": "975c346b-10c7-42bc-8c70-d6fb8743662f"
+        },
+        "item": {
+          "id": "ee1a09da-3891-4478-912e-d4f1e494a380",
+          "name": "EP_4_object_info_2",
+          "request": {
+            "url": {
+              "path": [
+                "object_info_2"
+              ],
+              "host": [
+                "{{url}}"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "Mariia"
+                },
+                {
+                  "key": "age",
+                  "value": "35"
+                },
+                {
+                  "key": "salary",
+                  "value": "1500"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "5007",
+            "path": [
+              "object_info_2"
+            ],
+            "host": [
+              "162",
+              "55",
+              "220",
+              "72"
+            ],
+            "query": [
+              {
+                "key": "name",
+                "value": "Mariia"
+              },
+              {
+                "key": "age",
+                "value": "35"
+              },
+              {
+                "key": "salary",
+                "value": "1500"
+              }
+            ],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.29.0",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "3c68d0e0-4c38-4d9c-baa6-be560b37b0b5",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "162.55.220.72:5007",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "GET"
+        },
+        "response": {
+          "id": "82df1c74-082a-4166-a80c-829ec77abcc9",
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "249"
+            },
+            {
+              "key": "Server",
+              "value": "Werkzeug/2.0.1 Python/3.8.10"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 10 Jun 2023 08:20:54 GMT"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              112,
+              101,
+              114,
+              115,
+              111,
+              110,
+              34,
+              58,
+              123,
+              34,
+              117,
+              95,
+              97,
+              103,
+              101,
+              34,
+              58,
+              51,
+              53,
+              44,
+              34,
+              117,
+              95,
+              110,
+              97,
+              109,
+              101,
+              34,
+              58,
+              91,
+              34,
+              77,
+              97,
+              114,
+              105,
+              105,
+              97,
+              34,
+              44,
+              49,
+              53,
+              48,
+              48,
+              44,
+              51,
+              53,
+              93,
+              44,
+              34,
+              117,
+              95,
+              115,
+              97,
+              108,
+              97,
+              114,
+              121,
+              95,
+              53,
+              95,
+              121,
+              101,
+              97,
+              114,
+              115,
+              34,
+              58,
+              54,
+              51,
+              48,
+              48,
+              46,
+              48,
+              125,
+              44,
+              34,
+              113,
+              97,
+              95,
+              115,
+              97,
+              108,
+              97,
+              114,
+              121,
+              95,
+              97,
+              102,
+              116,
+              101,
+              114,
+              95,
+              49,
+              46,
+              53,
+              95,
+              121,
+              101,
+              97,
+              114,
+              34,
+              58,
+              52,
+              57,
+              53,
+              48,
+              46,
+              48,
+              44,
+              34,
+              113,
+              97,
+              95,
+              115,
+              97,
+              108,
+              97,
+              114,
+              121,
+              95,
+              97,
+              102,
+              116,
+              101,
+              114,
+              95,
+              49,
+              50,
+              95,
+              109,
+              111,
+              110,
+              116,
+              104,
+              115,
+              34,
+              58,
+              52,
+              48,
+              53,
+              48,
+              46,
+              48,
+              48,
+              48,
+              48,
+              48,
+              48,
+              48,
+              48,
+              48,
+              48,
+              48,
+              48,
+              53,
+              44,
+              34,
+              113,
+              97,
+              95,
+              115,
+              97,
+              108,
+              97,
+              114,
+              121,
+              95,
+              97,
+              102,
+              116,
+              101,
+              114,
+              95,
+              51,
+              46,
+              53,
+              95,
+              121,
+              101,
+              97,
+              114,
+              115,
+              34,
+              58,
+              53,
+              55,
+              48,
+              48,
+              46,
+              48,
+              44,
+              34,
+              113,
+              97,
+              95,
+              115,
+              97,
+              108,
+              97,
+              114,
+              121,
+              95,
+              97,
+              102,
+              116,
+              101,
+              114,
+              95,
+              54,
+              95,
+              109,
+              111,
+              110,
+              116,
+              104,
+              115,
+              34,
+              58,
+              51,
+              48,
+              48,
+              48,
+              44,
+              34,
+              115,
+              116,
+              97,
+              114,
+              116,
+              95,
+              113,
+              97,
+              95,
+              115,
+              97,
+              108,
+              97,
+              114,
+              121,
+              34,
+              58,
+              49,
+              53,
+              48,
+              48,
+              125,
+              10
+            ]
+          },
+          "cookie": [],
+          "responseTime": 137,
+          "responseSize": 249
+        },
+        "id": "ee1a09da-3891-4478-912e-d4f1e494a380",
+        "assertions": [
+          {
+            "assertion": "Status code is 200",
+            "skipped": false
+          }
+        ]
+      },
+      {
+        "cursor": {
+          "ref": "b7aeeaed-a250-45d0-9447-3f1e1d975a76",
+          "length": 7,
+          "cycles": 1,
+          "position": 4,
+          "iteration": 0,
+          "httpRequestId": "ddab2d98-b395-4711-84e1-c32c6a4e5e50"
+        },
+        "item": {
+          "id": "0f6cd6c3-e7c5-4ce3-8ac4-ff62bdbc5ebc",
+          "name": "EP_5_object_info_3",
+          "request": {
+            "url": {
+              "path": [
+                "object_info_3"
+              ],
+              "host": [
+                "{{url}}"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "Mariia"
+                },
+                {
+                  "key": "age",
+                  "value": "35"
+                },
+                {
+                  "key": "salary",
+                  "value": "1500"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "5007",
+            "path": [
+              "object_info_3"
+            ],
+            "host": [
+              "162",
+              "55",
+              "220",
+              "72"
+            ],
+            "query": [
+              {
+                "key": "name",
+                "value": "Mariia"
+              },
+              {
+                "key": "age",
+                "value": "35"
+              },
+              {
+                "key": "salary",
+                "value": "1500"
+              }
+            ],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.29.0",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "7acc0125-97f6-4f2a-981b-d0532654ea24",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "162.55.220.72:5007",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "GET"
+        },
+        "response": {
+          "id": "6e098877-1542-4c3b-8cb3-0ede3fae6fcf",
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "186"
+            },
+            {
+              "key": "Server",
+              "value": "Werkzeug/2.0.1 Python/3.8.10"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 10 Jun 2023 08:20:54 GMT"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              97,
+              103,
+              101,
+              34,
+              58,
+              34,
+              51,
+              53,
+              34,
+              44,
+              34,
+              102,
+              97,
+              109,
+              105,
+              108,
+              121,
+              34,
+              58,
+              123,
+              34,
+              99,
+              104,
+              105,
+              108,
+              100,
+              114,
+              101,
+              110,
+              34,
+              58,
+              91,
+              91,
+              34,
+              65,
+              108,
+              101,
+              120,
+              34,
+              44,
+              50,
+              52,
+              93,
+              44,
+              91,
+              34,
+              75,
+              97,
+              116,
+              101,
+              34,
+              44,
+              49,
+              50,
+              93,
+              93,
+              44,
+              34,
+              112,
+              101,
+              116,
+              115,
+              34,
+              58,
+              123,
+              34,
+              99,
+              97,
+              116,
+              34,
+              58,
+              123,
+              34,
+              97,
+              103,
+              101,
+              34,
+              58,
+              51,
+              44,
+              34,
+              110,
+              97,
+              109,
+              101,
+              34,
+              58,
+              34,
+              83,
+              117,
+              110,
+              110,
+              121,
+              34,
+              125,
+              44,
+              34,
+              100,
+              111,
+              103,
+              34,
+              58,
+              123,
+              34,
+              97,
+              103,
+              101,
+              34,
+              58,
+              52,
+              44,
+              34,
+              110,
+              97,
+              109,
+              101,
+              34,
+              58,
+              34,
+              76,
+              117,
+              107,
+              121,
+              34,
+              125,
+              125,
+              44,
+              34,
+              117,
+              95,
+              115,
+              97,
+              108,
+              97,
+              114,
+              121,
+              95,
+              49,
+              95,
+              53,
+              95,
+              121,
+              101,
+              97,
+              114,
+              34,
+              58,
+              54,
+              48,
+              48,
+              48,
+              125,
+              44,
+              34,
+              110,
+              97,
+              109,
+              101,
+              34,
+              58,
+              34,
+              77,
+              97,
+              114,
+              105,
+              105,
+              97,
+              34,
+              44,
+              34,
+              115,
+              97,
+              108,
+              97,
+              114,
+              121,
+              34,
+              58,
+              49,
+              53,
+              48,
+              48,
+              125,
+              10
+            ]
+          },
+          "cookie": [],
+          "responseTime": 132,
+          "responseSize": 186
+        },
+        "id": "0f6cd6c3-e7c5-4ce3-8ac4-ff62bdbc5ebc",
+        "assertions": [
+          {
+            "assertion": "Status code is 200",
+            "skipped": false
+          }
+        ]
+      },
+      {
+        "cursor": {
+          "ref": "02603409-116a-4c1d-b35d-f1528477ba6d",
+          "length": 7,
+          "cycles": 1,
+          "position": 5,
+          "iteration": 0,
+          "httpRequestId": "95af8e69-316b-401b-a897-2427586bc847"
+        },
+        "item": {
+          "id": "6d84dd1d-8532-4d22-9dc7-2893396292d5",
+          "name": "EP_6_object_info_4",
+          "request": {
+            "url": {
+              "path": [
+                "object_info_4"
+              ],
+              "host": [
+                "{{url}}"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "Mariia"
+                },
+                {
+                  "key": "age",
+                  "value": "35"
+                },
+                {
+                  "key": "salary",
+                  "value": "1500"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "5007",
+            "path": [
+              "object_info_4"
+            ],
+            "host": [
+              "162",
+              "55",
+              "220",
+              "72"
+            ],
+            "query": [
+              {
+                "key": "name",
+                "value": "Mariia"
+              },
+              {
+                "key": "age",
+                "value": "35"
+              },
+              {
+                "key": "salary",
+                "value": "1500"
+              }
+            ],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.29.0",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "5eb5bb85-e5dc-4cb6-8ca9-2d97e6170d3c",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "162.55.220.72:5007",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "GET"
+        },
+        "response": {
+          "id": "d944c990-667b-4560-a248-c2fa4a25219d",
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "57"
+            },
+            {
+              "key": "Server",
+              "value": "Werkzeug/2.0.1 Python/3.8.10"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 10 Jun 2023 08:20:54 GMT"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              97,
+              103,
+              101,
+              34,
+              58,
+              51,
+              53,
+              44,
+              34,
+              110,
+              97,
+              109,
+              101,
+              34,
+              58,
+              34,
+              77,
+              97,
+              114,
+              105,
+              105,
+              97,
+              34,
+              44,
+              34,
+              115,
+              97,
+              108,
+              97,
+              114,
+              121,
+              34,
+              58,
+              91,
+              49,
+              53,
+              48,
+              48,
+              44,
+              34,
+              51,
+              48,
+              48,
+              48,
+              34,
+              44,
+              34,
+              52,
+              53,
+              48,
+              48,
+              34,
+              93,
+              125,
+              10
+            ]
+          },
+          "cookie": [],
+          "responseTime": 156,
+          "responseSize": 57
+        },
+        "id": "6d84dd1d-8532-4d22-9dc7-2893396292d5",
+        "assertions": [
+          {
+            "assertion": "Status code is 200",
+            "skipped": false
+          }
+        ]
+      },
+      {
+        "cursor": {
+          "ref": "1d99cce6-14e7-4650-a046-c99fdac27ea1",
+          "length": 7,
+          "cycles": 1,
+          "position": 6,
+          "iteration": 0,
+          "httpRequestId": "ca110b88-1f6d-4b04-9a34-04b8e93786ba"
+        },
+        "item": {
+          "id": "b82a3c37-cb60-4d03-b3e2-7a6af8ec099e",
+          "name": "EP_7_user_info_2",
+          "request": {
+            "url": {
+              "path": [
+                "user_info_2"
+              ],
+              "host": [
+                "{{url}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Mariia",
+                  "type": "text"
+                },
+                {
+                  "key": "age",
+                  "value": "35",
+                  "type": "text"
+                },
+                {
+                  "key": "salary",
+                  "value": "1500",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": [],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "5007",
+            "path": [
+              "user_info_2"
+            ],
+            "host": [
+              "162",
+              "55",
+              "220",
+              "72"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.29.0",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "cfaace20-c988-4787-9e20-fe4170972449",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "162.55.220.72:5007",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            },
+            {
+              "key": "Content-Length",
+              "value": "378",
+              "system": true
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "formdata",
+            "formdata": [
+              {
+                "key": "name",
+                "value": "Mariia",
+                "type": "text"
+              },
+              {
+                "key": "age",
+                "value": "35",
+                "type": "text"
+              },
+              {
+                "key": "salary",
+                "value": "1500",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        "response": {
+          "id": "5692f242-ae0e-4112-a0f3-ab15e230c433",
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "249"
+            },
+            {
+              "key": "Server",
+              "value": "Werkzeug/2.0.1 Python/3.8.10"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 10 Jun 2023 08:20:55 GMT"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              112,
+              101,
+              114,
+              115,
+              111,
+              110,
+              34,
+              58,
+              123,
+              34,
+              117,
+              95,
+              97,
+              103,
+              101,
+              34,
+              58,
+              51,
+              53,
+              44,
+              34,
+              117,
+              95,
+              110,
+              97,
+              109,
+              101,
+              34,
+              58,
+              91,
+              34,
+              77,
+              97,
+              114,
+              105,
+              105,
+              97,
+              34,
+              44,
+              49,
+              53,
+              48,
+              48,
+              44,
+              51,
+              53,
+              93,
+              44,
+              34,
+              117,
+              95,
+              115,
+              97,
+              108,
+              97,
+              114,
+              121,
+              95,
+              53,
+              95,
+              121,
+              101,
+              97,
+              114,
+              115,
+              34,
+              58,
+              54,
+              51,
+              48,
+              48,
+              46,
+              48,
+              125,
+              44,
+              34,
+              113,
+              97,
+              95,
+              115,
+              97,
+              108,
+              97,
+              114,
+              121,
+              95,
+              97,
+              102,
+              116,
+              101,
+              114,
+              95,
+              49,
+              46,
+              53,
+              95,
+              121,
+              101,
+              97,
+              114,
+              34,
+              58,
+              52,
+              57,
+              53,
+              48,
+              46,
+              48,
+              44,
+              34,
+              113,
+              97,
+              95,
+              115,
+              97,
+              108,
+              97,
+              114,
+              121,
+              95,
+              97,
+              102,
+              116,
+              101,
+              114,
+              95,
+              49,
+              50,
+              95,
+              109,
+              111,
+              110,
+              116,
+              104,
+              115,
+              34,
+              58,
+              52,
+              48,
+              53,
+              48,
+              46,
+              48,
+              48,
+              48,
+              48,
+              48,
+              48,
+              48,
+              48,
+              48,
+              48,
+              48,
+              48,
+              53,
+              44,
+              34,
+              113,
+              97,
+              95,
+              115,
+              97,
+              108,
+              97,
+              114,
+              121,
+              95,
+              97,
+              102,
+              116,
+              101,
+              114,
+              95,
+              51,
+              46,
+              53,
+              95,
+              121,
+              101,
+              97,
+              114,
+              115,
+              34,
+              58,
+              53,
+              55,
+              48,
+              48,
+              46,
+              48,
+              44,
+              34,
+              113,
+              97,
+              95,
+              115,
+              97,
+              108,
+              97,
+              114,
+              121,
+              95,
+              97,
+              102,
+              116,
+              101,
+              114,
+              95,
+              54,
+              95,
+              109,
+              111,
+              110,
+              116,
+              104,
+              115,
+              34,
+              58,
+              51,
+              48,
+              48,
+              48,
+              44,
+              34,
+              115,
+              116,
+              97,
+              114,
+              116,
+              95,
+              113,
+              97,
+              95,
+              115,
+              97,
+              108,
+              97,
+              114,
+              121,
+              34,
+              58,
+              49,
+              53,
+              48,
+              48,
+              125,
+              10
+            ]
+          },
+          "cookie": [],
+          "responseTime": 141,
+          "responseSize": 249
+        },
+        "id": "b82a3c37-cb60-4d03-b3e2-7a6af8ec099e",
+        "assertions": [
+          {
+            "assertion": "Status code is 200",
+            "skipped": false
+          }
+        ]
+      }
+    ],
+    "transfers": {
+      "responseTotal": 939
+    },
+    "failures": [],
+    "error": null
+  }
+}

@@ -1,0 +1,2788 @@
+{
+  "collection": {
+    "_": {
+      "postman_id": "27db47f7-bbc9-4b06-a681-67a22de5fbc5"
+    },
+    "item": [
+      {
+        "id": "e81ac034-a884-4e44-bf0c-046802d523be",
+        "name": "Request_first",
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "5007",
+            "path": [
+              "first"
+            ],
+            "host": [
+              "162",
+              "55",
+              "220",
+              "72"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "response": [],
+        "event": [
+          {
+            "listen": "test",
+            "script": {
+              "id": "98ecf806-376f-43a9-8596-f24f61ba5d5b",
+              "type": "text/javascript",
+              "exec": [
+                "//Receive Status code 200 response\r",
+                "pm.test(\"Status code is 200\", function () {\r",
+                "    pm.response.to.have.status(200);\r",
+                "});\r",
+                "\r",
+                "//Test that there is a correct string in the body\r",
+                "pm.test(\"Body matches string\", function () {\r",
+                "    pm.expect(pm.response.text()).to.include(\"This is the first responce from server!ss\");\r",
+                "});\r",
+                "\r",
+                "\r",
+                ""
+              ],
+              "_lastExecutionId": "d5eee971-8ea5-4d55-8cf7-4e83ad4ff085"
+            }
+          }
+        ],
+        "protocolProfileBehavior": {
+          "disableBodyPruning": true
+        }
+      },
+      {
+        "id": "ec5f4625-0619-4605-849b-dc0ff2032b1f",
+        "name": "Request_user_info_3",
+        "request": {
+          "url": {
+            "path": [
+              "user_info_3"
+            ],
+            "host": [
+              "{{url}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "method": "POST",
+          "body": {
+            "mode": "formdata",
+            "formdata": [
+              {
+                "key": "name",
+                "value": "Mariia",
+                "type": "text"
+              },
+              {
+                "key": "age",
+                "value": "35",
+                "type": "text"
+              },
+              {
+                "key": "salary",
+                "value": "1500",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        "response": [],
+        "event": [
+          {
+            "listen": "test",
+            "script": {
+              "id": "ca59a091-40ab-4ffe-bf37-797d2089db90",
+              "type": "text/javascript",
+              "exec": [
+                "//Receive Status code 200 response\r",
+                "pm.test(\"Status code is 200\", function () {\r",
+                "    pm.response.to.have.status(200);\r",
+                "});\r",
+                "\r",
+                "//Parsing response body in json\r",
+                "var RespData = pm.response.json();\r",
+                "\r",
+                "//Test that name in the response body is equal to name in request ( input manually)\r",
+                "pm.test(\"Name in the response is equal to name\", function () {\r",
+                "    pm.expect(RespData.name).to.eql(\"Mariia\");\r",
+                "});\r",
+                "\r",
+                "//Test that age in the response body is equal to age in request ( input manually)\r",
+                "pm.test(\"Age in the response is equal to age\", function () {\r",
+                "    pm.expect(RespData.age).to.eql(\"35\");\r",
+                "});\r",
+                "\r",
+                "//Test that salary in the response body is equal to salary in request ( input manually)\r",
+                "pm.test(\"Salary in the response is equal to salary\", function () {\r",
+                "    pm.expect(RespData.salary).to.eql(1500);\r",
+                "});\r",
+                "\r",
+                "//Parsing the request\r",
+                "var ReqData = request.data;\r",
+                "\r",
+                "//Test that name in the response body is equal to name in request ( take name from request)\r",
+                "pm.test(\"Name in the response is equal to name\", function () {\r",
+                "    pm.expect(RespData.name).to.eql(ReqData.name);\r",
+                "});\r",
+                "\r",
+                "//Test that age in the response body is equal to age in request ( take age from request)\r",
+                "pm.test(\"Age in the response is equal to age\", function () {\r",
+                "    pm.expect(RespData.age).to.eql(ReqData.age);\r",
+                "});\r",
+                "\r",
+                "//Test that salary in the response body is equal to salary in request ( take salary from request)\r",
+                "pm.test(\"Salary in the response is equal to salary\", function () {\r",
+                "    pm.expect(RespData.salary).to.eql(Number(ReqData.salary));\r",
+                "});\r",
+                "\r",
+                "//Output parameter family to console from response\r",
+                "console.log(RespData.family)\r",
+                "\r",
+                "//Test that u_salary_1_5_year in the response is equal to salary * 4 (take salary from request)\r",
+                "pm.test(\"U_salary_1_5_year is equal to salary*4\", function () {\r",
+                "    pm.expect(RespData.family.u_salary_1_5_year).to.eql(ReqData.salary*4);\r",
+                "});\r",
+                ""
+              ],
+              "_lastExecutionId": "f15b20ec-275a-4dc6-b12d-293b56fbddbc"
+            }
+          }
+        ],
+        "protocolProfileBehavior": {
+          "disableBodyPruning": true
+        }
+      },
+      {
+        "id": "64944c69-3301-4af2-8aad-565a150a0718",
+        "name": "Request_object_info_3",
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "5007",
+            "path": [
+              "object_info_3"
+            ],
+            "host": [
+              "162",
+              "55",
+              "220",
+              "72"
+            ],
+            "query": [
+              {
+                "key": "name",
+                "value": "Mariia"
+              },
+              {
+                "key": "age",
+                "value": "35"
+              },
+              {
+                "key": "salary",
+                "value": "1500"
+              }
+            ],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "response": [],
+        "event": [
+          {
+            "listen": "test",
+            "script": {
+              "id": "8457aa4f-44fd-4470-8e63-4c5b6a91501c",
+              "type": "text/javascript",
+              "exec": [
+                "//Receive Status code 200 response\r",
+                "pm.test(\"Status code is 200\", function () {\r",
+                "    pm.response.to.have.status(200);\r",
+                "});\r",
+                "\r",
+                "//Parsing response body in json\r",
+                "var RespData = pm.response.json();\r",
+                "\r",
+                "//Parsing request\r",
+                "var ReqData = pm.request.url.query.toObject();\r",
+                "\r",
+                "//Test that name in the response body is equal to name in request ( take name from request)\r",
+                "pm.test(\"Name in the response is equal to name\", function () {\r",
+                "    pm.expect(RespData.name).to.eql(ReqData.name);\r",
+                "});\r",
+                "\r",
+                "//Test that age in the response body is equal to age in request ( take age from request)\r",
+                "pm.test(\"Age in the response is equal to age\", function () {\r",
+                "    pm.expect(RespData.age).to.eql(ReqData.age);\r",
+                "});\r",
+                "\r",
+                "//Test that salary in the response body is equal to salary in request ( take salary from request)\r",
+                "pm.test(\"Salary in the response is equal to salary\", function () {\r",
+                "    pm.expect(RespData.salary).to.eql(Number(ReqData.salary));\r",
+                "});\r",
+                "\r",
+                "//Output parameter family to console from response\r",
+                "console.log(RespData.family)\r",
+                "\r",
+                "//Test that parameter dog has parameter name\r",
+                "pm.test(\"Parameter Dog has parameter name\", function () {\r",
+                "    pm.expect(RespData.family.pets.dog).to.have.property(\"name\");\r",
+                "});\r",
+                "\r",
+                "//Test that parameter dog has parameter age\r",
+                "pm.test(\"Parameter Dog has parameter age\", function () {\r",
+                "    pm.expect(RespData.family.pets.dog).to.have.property(\"age\");\r",
+                "});\r",
+                "\r",
+                "//Test that parameter name has a value Luky\r",
+                "pm.test(\"Parameter name has a value Luky\", function () {\r",
+                "    pm.expect(RespData.family.pets.dog.name).to.eql(\"Luky\")\r",
+                "});\r",
+                "\r",
+                "//Test that parameter age has a value 4\r",
+                "pm.test(\"Parameter age has a value 4\", function () {\r",
+                "    pm.expect(RespData.family.pets.dog.age).to.eql(4)\r",
+                "});\r",
+                ""
+              ],
+              "_lastExecutionId": "049388f2-758a-4b1f-855a-46171659e4f1"
+            }
+          }
+        ],
+        "protocolProfileBehavior": {
+          "disableBodyPruning": true
+        }
+      },
+      {
+        "id": "a3915682-2668-4bec-b6dc-f421bfe7a1ef",
+        "name": "Request_object_info_4",
+        "request": {
+          "url": {
+            "path": [
+              "object_info_4"
+            ],
+            "host": [
+              "{{url}}"
+            ],
+            "query": [
+              {
+                "key": "name",
+                "value": "Mariia"
+              },
+              {
+                "key": "age",
+                "value": "35"
+              },
+              {
+                "key": "salary",
+                "value": "1500"
+              }
+            ],
+            "variable": []
+          },
+          "method": "GET"
+        },
+        "response": [],
+        "event": [
+          {
+            "listen": "test",
+            "script": {
+              "id": "47e6156c-b7fa-4640-8b52-b769145dd1e2",
+              "type": "text/javascript",
+              "exec": [
+                "//Receive Status code 200 response\r",
+                "pm.test(\"Status code is 200\", function () {\r",
+                "    pm.response.to.have.status(200);\r",
+                "});\r",
+                "\r",
+                "//Parsing response body in json\r",
+                "var RespData = pm.response.json();\r",
+                "\r",
+                "//Parsing request\r",
+                "var ReqData = pm.request.url.query.toObject();\r",
+                "\r",
+                "//Test that name in the response body is equal to name in request ( take name from request)\r",
+                "pm.test(\"Name in the response is equal to name\", function () {\r",
+                "    pm.expect(RespData.name).to.eql(ReqData.name)\r",
+                "});\r",
+                "\r",
+                "//Test that age in the response body is equal to age in request ( take age from request)\r",
+                "pm.test(\"Age in the response is equal to age\", function () {\r",
+                "    pm.expect(RespData.age).to.eql(Number(ReqData.age))\r",
+                "});\r",
+                "\r",
+                "//Output parameter salary to console from request\r",
+                "console.log(ReqData.salary);\r",
+                "\r",
+                "//Output parameter salary to console from response\r",
+                "console.log(RespData.salary);\r",
+                "\r",
+                "//Output 0 element of parameter salary to console from response\r",
+                "console.log(RespData.salary[0]);\r",
+                "\r",
+                "//Output 1 element of parameter salary to console from response\r",
+                "console.log(RespData.salary[1]);\r",
+                "\r",
+                "//Output 2 element of parameter salary to console from response\r",
+                "console.log(RespData.salary[2]);\r",
+                "\r",
+                "//Test that 0 element of parameter salary is equal to request salary (take salary from request)\r",
+                "pm.test(\"0 element of parameter salary is equal to salary\", function () {\r",
+                "    pm.expect(RespData.salary[0]).to.eql(Number(ReqData.salary))\r",
+                "});\r",
+                "\r",
+                "//Test that 1 element of parameter salary is equal to request salary * 2 (take salary from request)\r",
+                "pm.test(\"1 element of parameter salary is equal to salary*2\", function () {\r",
+                "    pm.expect(RespData.salary[1]).to.eql(String(ReqData.salary*2))\r",
+                "});\r",
+                "\r",
+                "//Test that 2 element of parameter salary is equal to request salary * 3 (take salary from request)\r",
+                "pm.test(\"2 element of parameter salary is equal to salary*3\", function () {\r",
+                "    pm.expect(RespData.salary[2]).to.eql(String(ReqData.salary*3))\r",
+                "});\r",
+                "\r",
+                "//Send variable name to the environment\r",
+                "pm.environment.set(\"name\", RespData.name);\r",
+                "\r",
+                "//Send variable age to the environment\r",
+                "pm.environment.set(\"age\", RespData.age);\r",
+                "\r",
+                "//Send variable salary to the environment\r",
+                "pm.environment.set(\"salary\", 1500);\r",
+                "\r",
+                "//Write a loop that prints the elements of the list from the salary parameter to the console in order.\r",
+                "//Opt.1\r",
+                "var salary_resp = RespData.salary;\r",
+                "for (let i = 0; i < salary_resp.length; i ++)  {\r",
+                "    console.log(\"This is \" + salary_resp[i]+ \" element\")\r",
+                "\r",
+                "};\r",
+                "\r",
+                "//Opt.2\r",
+                "salary_resp.forEach(element => console.log(element))\r",
+                "\r",
+                "\r",
+                "\r",
+                "\r",
+                ""
+              ],
+              "_lastExecutionId": "beb26869-fbbe-46e5-ae14-d4745e1b0e07"
+            }
+          }
+        ],
+        "protocolProfileBehavior": {
+          "disableBodyPruning": true
+        }
+      },
+      {
+        "id": "51d9c53a-a264-42c5-be24-1f4caa4bb7b5",
+        "name": "Request_user_info_2",
+        "request": {
+          "url": {
+            "path": [
+              "user_info_2"
+            ],
+            "host": [
+              "{{url}}"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "method": "POST",
+          "body": {
+            "mode": "formdata",
+            "formdata": [
+              {
+                "key": "name",
+                "value": "{{name}}",
+                "type": "text"
+              },
+              {
+                "key": "age",
+                "value": "{{age}}",
+                "type": "text"
+              },
+              {
+                "key": "salary",
+                "value": "{{salary}}",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        "response": [],
+        "event": [
+          {
+            "listen": "test",
+            "script": {
+              "id": "9aef14ef-581a-45c2-9b8a-b2eb14796313",
+              "type": "text/javascript",
+              "exec": [
+                "//Receive Status code 200 response\r",
+                "pm.test(\"Status code is 200\", function () {\r",
+                "    pm.response.to.have.status(200);\r",
+                "});\r",
+                "\r",
+                "//Parsing response body in json\r",
+                "var RespData = pm.response.json();\r",
+                "\r",
+                "//Parsing request\r",
+                "var ReqData = request.data;\r",
+                "\r",
+                "//Test that json response have a parameter start_qa_salary\r",
+                "pm.test(\"Json response has a parameter start_qa_salary\", function () {\r",
+                "    pm.expect(RespData).to.have.property(\"start_qa_salary\")\r",
+                "});\r",
+                "\r",
+                "//Test that json response has a parameter qa_salary_after_6_months\r",
+                "pm.test(\"Json response has a parameter qa_salary_after_6_months\", function () {\r",
+                "    pm.expect(RespData).to.have.property(\"qa_salary_after_6_months\")\r",
+                "});\r",
+                "\r",
+                "//Test that json response has a parameter qa_salary_after_12_months\r",
+                "pm.test(\"Json response has a parameter qa_salary_after_12_months\", function (){ \r",
+                "    pm.expect(RespData).to.have.property(\"qa_salary_after_12_months\")\r",
+                "});\r",
+                "\r",
+                "//Test that json response has a parameter qa_salary_after_1.5_year\r",
+                "pm.test(\"Json response has a parameter qa_salary_after_1.5_year\", function () {\r",
+                "    pm.expect(RespData).to.have.property(\"qa_salary_after_1.5_year\")\r",
+                "});\r",
+                "\r",
+                "//Test that json response has a parameter qa_salary_after_3.5_years\r",
+                "pm.test(\"Json response has a parameter qa_salary_after_3.5_years\", function () {\r",
+                "    pm.expect(RespData).to.have.property(\"qa_salary_after_3.5_years\")\r",
+                "});\r",
+                "\r",
+                "//Test that json response has a parameter person\r",
+                "pm.test(\"Json response has a parameter person\", function () {\r",
+                "    pm.expect(RespData).to.have.property(\"person\")\r",
+                "});\r",
+                "\r",
+                "//Test that parameter start_qa_salary in equal to salary\r",
+                "pm.test(\"Parameter start_qa_salary  in equal to salary\", function () {\r",
+                "    pm.expect(RespData.start_qa_salary).to.eql(+ReqData.salary)\r",
+                "});\r",
+                "\r",
+                "//Test that parameter qa_salary_after_6_months in equal to salary*2\r",
+                "pm.test(\"Parameter qa_salary_after_6_months in equal to salary*2\", function () {\r",
+                "    pm.expect(RespData.qa_salary_after_6_months).to.eql(+ReqData.salary*2)\r",
+                "});\r",
+                "\r",
+                "//Test that parameter qa_salary_after_12_months in equal to salary*2.7\r",
+                "pm.test(\"Parameter qa_salary_after_12_months in equal to salary*2.7\", function () {\r",
+                "    pm.expect(RespData.qa_salary_after_12_months).to.eql(+ReqData.salary*2.7)\r",
+                "});\r",
+                "\r",
+                "//Test that parameter qa_salary_after_1.5_year in equal to salary*3.3\r",
+                "var qa_salary_after_1_5_year = RespData[\"qa_salary_after_1.5_year\"];\r",
+                "\r",
+                "pm.test(\"Parameter qa_salary_after_1.5_year in equal to salary*3.3\", function () {\r",
+                "   pm.expect(qa_salary_after_1_5_year).to.eql(Number(ReqData.salary*3.3))\r",
+                "});\r",
+                "\r",
+                "//Test that parameter qa_salary_after_3.5_years is equal to salary*3.8\r",
+                "var qa_salary_after_3_5_years = RespData[\"qa_salary_after_3.5_years\"];\r",
+                "\r",
+                "pm.test(\"Parameter qa_salary_after_3.5_years is equal to salary*3.8\", function () {\r",
+                "    pm.expect(qa_salary_after_3_5_years).to.eql(Number(ReqData.salary*3.8))\r",
+                "});\r",
+                "\r",
+                "\r",
+                "//Test that in parameter person 1 element of u_name is equal to salary\r",
+                "pm.test(\"In parameter person 1 element of u_name  is equal to salary\", function () {\r",
+                "    pm.expect(RespData.person.u_name[1]).to.equal(+ReqData.salary)\r",
+                "});\r",
+                "\r",
+                "//Test that parameter u_age is equal to age\r",
+                "pm.test(\"Parameter u_age is equal to age\", function () {\r",
+                "    pm.expect(RespData.person.u_age).to.eql(+ReqData.age)\r",
+                "});\r",
+                "\r",
+                "//Test that parameter u_salary_5_years is equal to salary*4.2\r",
+                "pm.test(\"Parameter u_salary_5_years is equal to salary*4.2\", function () {\r",
+                "    pm.expect(RespData.person.u_salary_5_years).to.eql(+ReqData.salary*4.2)\r",
+                "});\r",
+                "\r",
+                "/**** Write a loop that will print the list items from the person parameter to the console in order.\r",
+                "Opt.1*/\r",
+                "var person_resp = RespData.person \r",
+                "\r",
+                "var person_resp = (Object.keys(RespData.person));\r",
+                "for(var i = 0; i < person_resp.length; i++){\r",
+                "    console.log(person_resp[i]);\r",
+                "};\r",
+                "\r",
+                "//Opt.2\r",
+                "var person_resp = RespData.person.u_name;\r",
+                "for (let i = 0; i < person_resp.length; i ++)  {\r",
+                "    console.log(\"This is \" + person_resp[i]+ \" element\")\r",
+                "\r",
+                "};\r",
+                ""
+              ],
+              "_lastExecutionId": "15557683-6197-44b4-bff2-51208d504f20"
+            }
+          }
+        ],
+        "protocolProfileBehavior": {
+          "disableBodyPruning": true
+        }
+      }
+    ],
+    "event": [],
+    "variable": [],
+    "info": {
+      "_postman_id": "27db47f7-bbc9-4b06-a681-67a22de5fbc5",
+      "name": "Postman 2",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    }
+  },
+  "environment": {
+    "_": {
+      "postman_variable_scope": "environment",
+      "postman_exported_at": "2023-06-09T15:03:56.107Z",
+      "postman_exported_using": "Postman/10.14.9"
+    },
+    "id": "d3d53da5-f011-4f70-8923-4fc81792f839",
+    "name": "Env2",
+    "values": [
+      {
+        "type": "any",
+        "value": "Mariia",
+        "key": "name"
+      },
+      {
+        "type": "any",
+        "value": 35,
+        "key": "age"
+      },
+      {
+        "type": "any",
+        "value": 1500,
+        "key": "salary"
+      },
+      {
+        "type": "any",
+        "value": "http://162.55.220.72:5006",
+        "key": "url"
+      },
+      {
+        "type": "any",
+        "value": "",
+        "key": "token"
+      }
+    ]
+  },
+  "globals": {
+    "id": "bfd6bcc9-a75b-4046-8d73-3618f2b41582",
+    "values": []
+  },
+  "run": {
+    "stats": {
+      "iterations": {
+        "total": 1,
+        "pending": 0,
+        "failed": 0
+      },
+      "items": {
+        "total": 5,
+        "pending": 0,
+        "failed": 0
+      },
+      "scripts": {
+        "total": 5,
+        "pending": 0,
+        "failed": 0
+      },
+      "prerequests": {
+        "total": 5,
+        "pending": 0,
+        "failed": 0
+      },
+      "requests": {
+        "total": 5,
+        "pending": 0,
+        "failed": 0
+      },
+      "tests": {
+        "total": 5,
+        "pending": 0,
+        "failed": 0
+      },
+      "assertions": {
+        "total": 39,
+        "pending": 0,
+        "failed": 0
+      },
+      "testScripts": {
+        "total": 5,
+        "pending": 0,
+        "failed": 0
+      },
+      "prerequestScripts": {
+        "total": 0,
+        "pending": 0,
+        "failed": 0
+      }
+    },
+    "timings": {
+      "responseAverage": 147,
+      "responseMin": 117,
+      "responseMax": 207,
+      "responseSd": 32.81463088318989,
+      "dnsAverage": 0,
+      "dnsMin": 0,
+      "dnsMax": 0,
+      "dnsSd": 0,
+      "firstByteAverage": 0,
+      "firstByteMin": 0,
+      "firstByteMax": 0,
+      "firstByteSd": 0,
+      "started": 1686384984238,
+      "completed": 1686384985493
+    },
+    "executions": [
+      {
+        "cursor": {
+          "position": 0,
+          "iteration": 0,
+          "length": 5,
+          "cycles": 1,
+          "empty": false,
+          "eof": false,
+          "bof": true,
+          "cr": false,
+          "ref": "3813428f-bab9-49ed-b025-1cde8fe1ed03",
+          "httpRequestId": "bfb9a6fe-f25e-4b2b-8c57-492e962f45f7"
+        },
+        "item": {
+          "id": "e81ac034-a884-4e44-bf0c-046802d523be",
+          "name": "Request_first",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "port": "5007",
+              "path": [
+                "first"
+              ],
+              "host": [
+                "162",
+                "55",
+                "220",
+                "72"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "98ecf806-376f-43a9-8596-f24f61ba5d5b",
+                "type": "text/javascript",
+                "exec": [
+                  "//Receive Status code 200 response\r",
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});\r",
+                  "\r",
+                  "//Test that there is a correct string in the body\r",
+                  "pm.test(\"Body matches string\", function () {\r",
+                  "    pm.expect(pm.response.text()).to.include(\"This is the first responce from server!ss\");\r",
+                  "});\r",
+                  "\r",
+                  "\r",
+                  ""
+                ],
+                "_lastExecutionId": "d5eee971-8ea5-4d55-8cf7-4e83ad4ff085"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "5007",
+            "path": [
+              "first"
+            ],
+            "host": [
+              "162",
+              "55",
+              "220",
+              "72"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.29.0",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "8d1f8f6a-8e66-4cd6-9658-95eddc9ef56c",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "162.55.220.72:5007",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "GET"
+        },
+        "response": {
+          "id": "b29ec24c-4a75-4272-8525-5f57d736bb3b",
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/html; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "41"
+            },
+            {
+              "key": "Server",
+              "value": "Werkzeug/2.0.1 Python/3.8.10"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 10 Jun 2023 08:15:06 GMT"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              84,
+              104,
+              105,
+              115,
+              32,
+              105,
+              115,
+              32,
+              116,
+              104,
+              101,
+              32,
+              102,
+              105,
+              114,
+              115,
+              116,
+              32,
+              114,
+              101,
+              115,
+              112,
+              111,
+              110,
+              99,
+              101,
+              32,
+              102,
+              114,
+              111,
+              109,
+              32,
+              115,
+              101,
+              114,
+              118,
+              101,
+              114,
+              33,
+              115,
+              115
+            ]
+          },
+          "cookie": [],
+          "responseTime": 207,
+          "responseSize": 41
+        },
+        "id": "e81ac034-a884-4e44-bf0c-046802d523be",
+        "assertions": [
+          {
+            "assertion": "Status code is 200",
+            "skipped": false
+          },
+          {
+            "assertion": "Body matches string",
+            "skipped": false
+          }
+        ]
+      },
+      {
+        "cursor": {
+          "ref": "3028d44b-ace6-46ef-b015-ad46f341b204",
+          "length": 5,
+          "cycles": 1,
+          "position": 1,
+          "iteration": 0,
+          "httpRequestId": "e2604880-2137-4111-a66c-518fca548c8a"
+        },
+        "item": {
+          "id": "ec5f4625-0619-4605-849b-dc0ff2032b1f",
+          "name": "Request_user_info_3",
+          "request": {
+            "url": {
+              "path": [
+                "user_info_3"
+              ],
+              "host": [
+                "{{url}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "Mariia",
+                  "type": "text"
+                },
+                {
+                  "key": "age",
+                  "value": "35",
+                  "type": "text"
+                },
+                {
+                  "key": "salary",
+                  "value": "1500",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "ca59a091-40ab-4ffe-bf37-797d2089db90",
+                "type": "text/javascript",
+                "exec": [
+                  "//Receive Status code 200 response\r",
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});\r",
+                  "\r",
+                  "//Parsing response body in json\r",
+                  "var RespData = pm.response.json();\r",
+                  "\r",
+                  "//Test that name in the response body is equal to name in request ( input manually)\r",
+                  "pm.test(\"Name in the response is equal to name\", function () {\r",
+                  "    pm.expect(RespData.name).to.eql(\"Mariia\");\r",
+                  "});\r",
+                  "\r",
+                  "//Test that age in the response body is equal to age in request ( input manually)\r",
+                  "pm.test(\"Age in the response is equal to age\", function () {\r",
+                  "    pm.expect(RespData.age).to.eql(\"35\");\r",
+                  "});\r",
+                  "\r",
+                  "//Test that salary in the response body is equal to salary in request ( input manually)\r",
+                  "pm.test(\"Salary in the response is equal to salary\", function () {\r",
+                  "    pm.expect(RespData.salary).to.eql(1500);\r",
+                  "});\r",
+                  "\r",
+                  "//Parsing the request\r",
+                  "var ReqData = request.data;\r",
+                  "\r",
+                  "//Test that name in the response body is equal to name in request ( take name from request)\r",
+                  "pm.test(\"Name in the response is equal to name\", function () {\r",
+                  "    pm.expect(RespData.name).to.eql(ReqData.name);\r",
+                  "});\r",
+                  "\r",
+                  "//Test that age in the response body is equal to age in request ( take age from request)\r",
+                  "pm.test(\"Age in the response is equal to age\", function () {\r",
+                  "    pm.expect(RespData.age).to.eql(ReqData.age);\r",
+                  "});\r",
+                  "\r",
+                  "//Test that salary in the response body is equal to salary in request ( take salary from request)\r",
+                  "pm.test(\"Salary in the response is equal to salary\", function () {\r",
+                  "    pm.expect(RespData.salary).to.eql(Number(ReqData.salary));\r",
+                  "});\r",
+                  "\r",
+                  "//Output parameter family to console from response\r",
+                  "console.log(RespData.family)\r",
+                  "\r",
+                  "//Test that u_salary_1_5_year in the response is equal to salary * 4 (take salary from request)\r",
+                  "pm.test(\"U_salary_1_5_year is equal to salary*4\", function () {\r",
+                  "    pm.expect(RespData.family.u_salary_1_5_year).to.eql(ReqData.salary*4);\r",
+                  "});\r",
+                  ""
+                ],
+                "_lastExecutionId": "f15b20ec-275a-4dc6-b12d-293b56fbddbc"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "5006",
+            "path": [
+              "user_info_3"
+            ],
+            "host": [
+              "162",
+              "55",
+              "220",
+              "72"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.29.0",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "35c2af3a-c7b4-48af-a475-99d7e7550b5e",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "162.55.220.72:5006",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            },
+            {
+              "key": "Content-Length",
+              "value": "378",
+              "system": true
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "formdata",
+            "formdata": [
+              {
+                "key": "name",
+                "value": "Mariia",
+                "type": "text"
+              },
+              {
+                "key": "age",
+                "value": "35",
+                "type": "text"
+              },
+              {
+                "key": "salary",
+                "value": "1500",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        "response": {
+          "id": "bc71298b-5251-48c0-9608-0d08ac878ef8",
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "224"
+            },
+            {
+              "key": "Server",
+              "value": "Werkzeug/2.0.1 Python/3.8.10"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 10 Jun 2023 08:15:07 GMT"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              10,
+              32,
+              32,
+              34,
+              97,
+              103,
+              101,
+              34,
+              58,
+              32,
+              34,
+              51,
+              53,
+              34,
+              44,
+              32,
+              10,
+              32,
+              32,
+              34,
+              102,
+              97,
+              109,
+              105,
+              108,
+              121,
+              34,
+              58,
+              32,
+              123,
+              10,
+              32,
+              32,
+              32,
+              32,
+              34,
+              99,
+              104,
+              105,
+              108,
+              100,
+              114,
+              101,
+              110,
+              34,
+              58,
+              32,
+              91,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              91,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              34,
+              65,
+              108,
+              101,
+              120,
+              34,
+              44,
+              32,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              50,
+              52,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              93,
+              44,
+              32,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              91,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              34,
+              75,
+              97,
+              116,
+              101,
+              34,
+              44,
+              32,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              49,
+              50,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              93,
+              10,
+              32,
+              32,
+              32,
+              32,
+              93,
+              44,
+              32,
+              10,
+              32,
+              32,
+              32,
+              32,
+              34,
+              117,
+              95,
+              115,
+              97,
+              108,
+              97,
+              114,
+              121,
+              95,
+              49,
+              95,
+              53,
+              95,
+              121,
+              101,
+              97,
+              114,
+              34,
+              58,
+              32,
+              54,
+              48,
+              48,
+              48,
+              10,
+              32,
+              32,
+              125,
+              44,
+              32,
+              10,
+              32,
+              32,
+              34,
+              110,
+              97,
+              109,
+              101,
+              34,
+              58,
+              32,
+              34,
+              77,
+              97,
+              114,
+              105,
+              105,
+              97,
+              34,
+              44,
+              32,
+              10,
+              32,
+              32,
+              34,
+              115,
+              97,
+              108,
+              97,
+              114,
+              121,
+              34,
+              58,
+              32,
+              49,
+              53,
+              48,
+              48,
+              10,
+              125,
+              10
+            ]
+          },
+          "cookie": [],
+          "responseTime": 155,
+          "responseSize": 224
+        },
+        "id": "ec5f4625-0619-4605-849b-dc0ff2032b1f",
+        "assertions": [
+          {
+            "assertion": "Status code is 200",
+            "skipped": false
+          },
+          {
+            "assertion": "Name in the response is equal to name",
+            "skipped": false
+          },
+          {
+            "assertion": "Age in the response is equal to age",
+            "skipped": false
+          },
+          {
+            "assertion": "Salary in the response is equal to salary",
+            "skipped": false
+          },
+          {
+            "assertion": "Name in the response is equal to name",
+            "skipped": false
+          },
+          {
+            "assertion": "Age in the response is equal to age",
+            "skipped": false
+          },
+          {
+            "assertion": "Salary in the response is equal to salary",
+            "skipped": false
+          },
+          {
+            "assertion": "U_salary_1_5_year is equal to salary*4",
+            "skipped": false
+          }
+        ]
+      },
+      {
+        "cursor": {
+          "ref": "097f7bd2-c92a-4339-8f87-f1523fd42e60",
+          "length": 5,
+          "cycles": 1,
+          "position": 2,
+          "iteration": 0,
+          "httpRequestId": "e3b0ee76-7ed6-4961-90df-49c3195c455b"
+        },
+        "item": {
+          "id": "64944c69-3301-4af2-8aad-565a150a0718",
+          "name": "Request_object_info_3",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "port": "5007",
+              "path": [
+                "object_info_3"
+              ],
+              "host": [
+                "162",
+                "55",
+                "220",
+                "72"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "Mariia"
+                },
+                {
+                  "key": "age",
+                  "value": "35"
+                },
+                {
+                  "key": "salary",
+                  "value": "1500"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "8457aa4f-44fd-4470-8e63-4c5b6a91501c",
+                "type": "text/javascript",
+                "exec": [
+                  "//Receive Status code 200 response\r",
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});\r",
+                  "\r",
+                  "//Parsing response body in json\r",
+                  "var RespData = pm.response.json();\r",
+                  "\r",
+                  "//Parsing request\r",
+                  "var ReqData = pm.request.url.query.toObject();\r",
+                  "\r",
+                  "//Test that name in the response body is equal to name in request ( take name from request)\r",
+                  "pm.test(\"Name in the response is equal to name\", function () {\r",
+                  "    pm.expect(RespData.name).to.eql(ReqData.name);\r",
+                  "});\r",
+                  "\r",
+                  "//Test that age in the response body is equal to age in request ( take age from request)\r",
+                  "pm.test(\"Age in the response is equal to age\", function () {\r",
+                  "    pm.expect(RespData.age).to.eql(ReqData.age);\r",
+                  "});\r",
+                  "\r",
+                  "//Test that salary in the response body is equal to salary in request ( take salary from request)\r",
+                  "pm.test(\"Salary in the response is equal to salary\", function () {\r",
+                  "    pm.expect(RespData.salary).to.eql(Number(ReqData.salary));\r",
+                  "});\r",
+                  "\r",
+                  "//Output parameter family to console from response\r",
+                  "console.log(RespData.family)\r",
+                  "\r",
+                  "//Test that parameter dog has parameter name\r",
+                  "pm.test(\"Parameter Dog has parameter name\", function () {\r",
+                  "    pm.expect(RespData.family.pets.dog).to.have.property(\"name\");\r",
+                  "});\r",
+                  "\r",
+                  "//Test that parameter dog has parameter age\r",
+                  "pm.test(\"Parameter Dog has parameter age\", function () {\r",
+                  "    pm.expect(RespData.family.pets.dog).to.have.property(\"age\");\r",
+                  "});\r",
+                  "\r",
+                  "//Test that parameter name has a value Luky\r",
+                  "pm.test(\"Parameter name has a value Luky\", function () {\r",
+                  "    pm.expect(RespData.family.pets.dog.name).to.eql(\"Luky\")\r",
+                  "});\r",
+                  "\r",
+                  "//Test that parameter age has a value 4\r",
+                  "pm.test(\"Parameter age has a value 4\", function () {\r",
+                  "    pm.expect(RespData.family.pets.dog.age).to.eql(4)\r",
+                  "});\r",
+                  ""
+                ],
+                "_lastExecutionId": "049388f2-758a-4b1f-855a-46171659e4f1"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "5007",
+            "path": [
+              "object_info_3"
+            ],
+            "host": [
+              "162",
+              "55",
+              "220",
+              "72"
+            ],
+            "query": [
+              {
+                "key": "name",
+                "value": "Mariia"
+              },
+              {
+                "key": "age",
+                "value": "35"
+              },
+              {
+                "key": "salary",
+                "value": "1500"
+              }
+            ],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.29.0",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "cd5edac4-daee-4570-a2e3-abb329610b21",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "162.55.220.72:5007",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "GET"
+        },
+        "response": {
+          "id": "8a0144a2-5feb-4741-b6e0-82be3a8b6339",
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "186"
+            },
+            {
+              "key": "Server",
+              "value": "Werkzeug/2.0.1 Python/3.8.10"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 10 Jun 2023 08:15:07 GMT"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              34,
+              97,
+              103,
+              101,
+              34,
+              58,
+              34,
+              51,
+              53,
+              34,
+              44,
+              34,
+              102,
+              97,
+              109,
+              105,
+              108,
+              121,
+              34,
+              58,
+              123,
+              34,
+              99,
+              104,
+              105,
+              108,
+              100,
+              114,
+              101,
+              110,
+              34,
+              58,
+              91,
+              91,
+              34,
+              65,
+              108,
+              101,
+              120,
+              34,
+              44,
+              50,
+              52,
+              93,
+              44,
+              91,
+              34,
+              75,
+              97,
+              116,
+              101,
+              34,
+              44,
+              49,
+              50,
+              93,
+              93,
+              44,
+              34,
+              112,
+              101,
+              116,
+              115,
+              34,
+              58,
+              123,
+              34,
+              99,
+              97,
+              116,
+              34,
+              58,
+              123,
+              34,
+              97,
+              103,
+              101,
+              34,
+              58,
+              51,
+              44,
+              34,
+              110,
+              97,
+              109,
+              101,
+              34,
+              58,
+              34,
+              83,
+              117,
+              110,
+              110,
+              121,
+              34,
+              125,
+              44,
+              34,
+              100,
+              111,
+              103,
+              34,
+              58,
+              123,
+              34,
+              97,
+              103,
+              101,
+              34,
+              58,
+              52,
+              44,
+              34,
+              110,
+              97,
+              109,
+              101,
+              34,
+              58,
+              34,
+              76,
+              117,
+              107,
+              121,
+              34,
+              125,
+              125,
+              44,
+              34,
+              117,
+              95,
+              115,
+              97,
+              108,
+              97,
+              114,
+              121,
+              95,
+              49,
+              95,
+              53,
+              95,
+              121,
+              101,
+              97,
+              114,
+              34,
+              58,
+              54,
+              48,
+              48,
+              48,
+              125,
+              44,
+              34,
+              110,
+              97,
+              109,
+              101,
+              34,
+              58,
+              34,
+              77,
+              97,
+              114,
+              105,
+              105,
+              97,
+              34,
+              44,
+              34,
+              115,
+              97,
+              108,
+              97,
+              114,
+              121,
+              34,
+              58,
+              49,
+              53,
+              48,
+              48,
+              125,
+              10
+            ]
+          },
+          "cookie": [],
+          "responseTime": 117,
+          "responseSize": 186
+        },
+        "id": "64944c69-3301-4af2-8aad-565a150a0718",
+        "assertions": [
+          {
+            "assertion": "Status code is 200",
+            "skipped": false
+          },
+          {
+            "assertion": "Name in the response is equal to name",
+            "skipped": false
+          },
+          {
+            "assertion": "Age in the response is equal to age",
+            "skipped": false
+          },
+          {
+            "assertion": "Salary in the response is equal to salary",
+            "skipped": false
+          },
+          {
+            "assertion": "Parameter Dog has parameter name",
+            "skipped": false
+          },
+          {
+            "assertion": "Parameter Dog has parameter age",
+            "skipped": false
+          },
+          {
+            "assertion": "Parameter name has a value Luky",
+            "skipped": false
+          },
+          {
+            "assertion": "Parameter age has a value 4",
+            "skipped": false
+          }
+        ]
+      },
+      {
+        "cursor": {
+          "ref": "c04b5762-2d3f-4689-b01c-d9934b1dd258",
+          "length": 5,
+          "cycles": 1,
+          "position": 3,
+          "iteration": 0,
+          "httpRequestId": "16840b98-052e-44a4-92b5-e1c444db1dd7"
+        },
+        "item": {
+          "id": "a3915682-2668-4bec-b6dc-f421bfe7a1ef",
+          "name": "Request_object_info_4",
+          "request": {
+            "url": {
+              "path": [
+                "object_info_4"
+              ],
+              "host": [
+                "{{url}}"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "Mariia"
+                },
+                {
+                  "key": "age",
+                  "value": "35"
+                },
+                {
+                  "key": "salary",
+                  "value": "1500"
+                }
+              ],
+              "variable": []
+            },
+            "method": "GET"
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "47e6156c-b7fa-4640-8b52-b769145dd1e2",
+                "type": "text/javascript",
+                "exec": [
+                  "//Receive Status code 200 response\r",
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});\r",
+                  "\r",
+                  "//Parsing response body in json\r",
+                  "var RespData = pm.response.json();\r",
+                  "\r",
+                  "//Parsing request\r",
+                  "var ReqData = pm.request.url.query.toObject();\r",
+                  "\r",
+                  "//Test that name in the response body is equal to name in request ( take name from request)\r",
+                  "pm.test(\"Name in the response is equal to name\", function () {\r",
+                  "    pm.expect(RespData.name).to.eql(ReqData.name)\r",
+                  "});\r",
+                  "\r",
+                  "//Test that age in the response body is equal to age in request ( take age from request)\r",
+                  "pm.test(\"Age in the response is equal to age\", function () {\r",
+                  "    pm.expect(RespData.age).to.eql(Number(ReqData.age))\r",
+                  "});\r",
+                  "\r",
+                  "//Output parameter salary to console from request\r",
+                  "console.log(ReqData.salary);\r",
+                  "\r",
+                  "//Output parameter salary to console from response\r",
+                  "console.log(RespData.salary);\r",
+                  "\r",
+                  "//Output 0 element of parameter salary to console from response\r",
+                  "console.log(RespData.salary[0]);\r",
+                  "\r",
+                  "//Output 1 element of parameter salary to console from response\r",
+                  "console.log(RespData.salary[1]);\r",
+                  "\r",
+                  "//Output 2 element of parameter salary to console from response\r",
+                  "console.log(RespData.salary[2]);\r",
+                  "\r",
+                  "//Test that 0 element of parameter salary is equal to request salary (take salary from request)\r",
+                  "pm.test(\"0 element of parameter salary is equal to salary\", function () {\r",
+                  "    pm.expect(RespData.salary[0]).to.eql(Number(ReqData.salary))\r",
+                  "});\r",
+                  "\r",
+                  "//Test that 1 element of parameter salary is equal to request salary * 2 (take salary from request)\r",
+                  "pm.test(\"1 element of parameter salary is equal to salary*2\", function () {\r",
+                  "    pm.expect(RespData.salary[1]).to.eql(String(ReqData.salary*2))\r",
+                  "});\r",
+                  "\r",
+                  "//Test that 2 element of parameter salary is equal to request salary * 3 (take salary from request)\r",
+                  "pm.test(\"2 element of parameter salary is equal to salary*3\", function () {\r",
+                  "    pm.expect(RespData.salary[2]).to.eql(String(ReqData.salary*3))\r",
+                  "});\r",
+                  "\r",
+                  "//Send variable name to the environment\r",
+                  "pm.environment.set(\"name\", RespData.name);\r",
+                  "\r",
+                  "//Send variable age to the environment\r",
+                  "pm.environment.set(\"age\", RespData.age);\r",
+                  "\r",
+                  "//Send variable salary to the environment\r",
+                  "pm.environment.set(\"salary\", 1500);\r",
+                  "\r",
+                  "//Write a loop that prints the elements of the list from the salary parameter to the console in order.\r",
+                  "//Opt.1\r",
+                  "var salary_resp = RespData.salary;\r",
+                  "for (let i = 0; i < salary_resp.length; i ++)  {\r",
+                  "    console.log(\"This is \" + salary_resp[i]+ \" element\")\r",
+                  "\r",
+                  "};\r",
+                  "\r",
+                  "//Opt.2\r",
+                  "salary_resp.forEach(element => console.log(element))\r",
+                  "\r",
+                  "\r",
+                  "\r",
+                  "\r",
+                  ""
+                ],
+                "_lastExecutionId": "beb26869-fbbe-46e5-ae14-d4745e1b0e07"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "5006",
+            "path": [
+              "object_info_4"
+            ],
+            "host": [
+              "162",
+              "55",
+              "220",
+              "72"
+            ],
+            "query": [
+              {
+                "key": "name",
+                "value": "Mariia"
+              },
+              {
+                "key": "age",
+                "value": "35"
+              },
+              {
+                "key": "salary",
+                "value": "1500"
+              }
+            ],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.29.0",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "c944820a-2d95-4b47-8b2e-cc200de948fe",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "162.55.220.72:5006",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            }
+          ],
+          "method": "GET"
+        },
+        "response": {
+          "id": "b903cd0b-7167-4706-ab90-0ca2abe58379",
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "92"
+            },
+            {
+              "key": "Server",
+              "value": "Werkzeug/2.0.1 Python/3.8.10"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 10 Jun 2023 08:15:07 GMT"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              10,
+              32,
+              32,
+              34,
+              97,
+              103,
+              101,
+              34,
+              58,
+              32,
+              51,
+              53,
+              44,
+              32,
+              10,
+              32,
+              32,
+              34,
+              110,
+              97,
+              109,
+              101,
+              34,
+              58,
+              32,
+              34,
+              77,
+              97,
+              114,
+              105,
+              105,
+              97,
+              34,
+              44,
+              32,
+              10,
+              32,
+              32,
+              34,
+              115,
+              97,
+              108,
+              97,
+              114,
+              121,
+              34,
+              58,
+              32,
+              91,
+              10,
+              32,
+              32,
+              32,
+              32,
+              49,
+              53,
+              48,
+              48,
+              44,
+              32,
+              10,
+              32,
+              32,
+              32,
+              32,
+              34,
+              51,
+              48,
+              48,
+              48,
+              34,
+              44,
+              32,
+              10,
+              32,
+              32,
+              32,
+              32,
+              34,
+              52,
+              53,
+              48,
+              48,
+              34,
+              10,
+              32,
+              32,
+              93,
+              10,
+              125,
+              10
+            ]
+          },
+          "cookie": [],
+          "responseTime": 121,
+          "responseSize": 92
+        },
+        "id": "a3915682-2668-4bec-b6dc-f421bfe7a1ef",
+        "assertions": [
+          {
+            "assertion": "Status code is 200",
+            "skipped": false
+          },
+          {
+            "assertion": "Name in the response is equal to name",
+            "skipped": false
+          },
+          {
+            "assertion": "Age in the response is equal to age",
+            "skipped": false
+          },
+          {
+            "assertion": "0 element of parameter salary is equal to salary",
+            "skipped": false
+          },
+          {
+            "assertion": "1 element of parameter salary is equal to salary*2",
+            "skipped": false
+          },
+          {
+            "assertion": "2 element of parameter salary is equal to salary*3",
+            "skipped": false
+          }
+        ]
+      },
+      {
+        "cursor": {
+          "ref": "f60a2c0a-247b-4cfe-b184-8b90bb757f93",
+          "length": 5,
+          "cycles": 1,
+          "position": 4,
+          "iteration": 0,
+          "httpRequestId": "68707ec2-9dc5-4f4d-97b8-69972e331448"
+        },
+        "item": {
+          "id": "51d9c53a-a264-42c5-be24-1f4caa4bb7b5",
+          "name": "Request_user_info_2",
+          "request": {
+            "url": {
+              "path": [
+                "user_info_2"
+              ],
+              "host": [
+                "{{url}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "{{name}}",
+                  "type": "text"
+                },
+                {
+                  "key": "age",
+                  "value": "{{age}}",
+                  "type": "text"
+                },
+                {
+                  "key": "salary",
+                  "value": "{{salary}}",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "9aef14ef-581a-45c2-9b8a-b2eb14796313",
+                "type": "text/javascript",
+                "exec": [
+                  "//Receive Status code 200 response\r",
+                  "pm.test(\"Status code is 200\", function () {\r",
+                  "    pm.response.to.have.status(200);\r",
+                  "});\r",
+                  "\r",
+                  "//Parsing response body in json\r",
+                  "var RespData = pm.response.json();\r",
+                  "\r",
+                  "//Parsing request\r",
+                  "var ReqData = request.data;\r",
+                  "\r",
+                  "//Test that json response have a parameter start_qa_salary\r",
+                  "pm.test(\"Json response has a parameter start_qa_salary\", function () {\r",
+                  "    pm.expect(RespData).to.have.property(\"start_qa_salary\")\r",
+                  "});\r",
+                  "\r",
+                  "//Test that json response has a parameter qa_salary_after_6_months\r",
+                  "pm.test(\"Json response has a parameter qa_salary_after_6_months\", function () {\r",
+                  "    pm.expect(RespData).to.have.property(\"qa_salary_after_6_months\")\r",
+                  "});\r",
+                  "\r",
+                  "//Test that json response has a parameter qa_salary_after_12_months\r",
+                  "pm.test(\"Json response has a parameter qa_salary_after_12_months\", function (){ \r",
+                  "    pm.expect(RespData).to.have.property(\"qa_salary_after_12_months\")\r",
+                  "});\r",
+                  "\r",
+                  "//Test that json response has a parameter qa_salary_after_1.5_year\r",
+                  "pm.test(\"Json response has a parameter qa_salary_after_1.5_year\", function () {\r",
+                  "    pm.expect(RespData).to.have.property(\"qa_salary_after_1.5_year\")\r",
+                  "});\r",
+                  "\r",
+                  "//Test that json response has a parameter qa_salary_after_3.5_years\r",
+                  "pm.test(\"Json response has a parameter qa_salary_after_3.5_years\", function () {\r",
+                  "    pm.expect(RespData).to.have.property(\"qa_salary_after_3.5_years\")\r",
+                  "});\r",
+                  "\r",
+                  "//Test that json response has a parameter person\r",
+                  "pm.test(\"Json response has a parameter person\", function () {\r",
+                  "    pm.expect(RespData).to.have.property(\"person\")\r",
+                  "});\r",
+                  "\r",
+                  "//Test that parameter start_qa_salary in equal to salary\r",
+                  "pm.test(\"Parameter start_qa_salary  in equal to salary\", function () {\r",
+                  "    pm.expect(RespData.start_qa_salary).to.eql(+ReqData.salary)\r",
+                  "});\r",
+                  "\r",
+                  "//Test that parameter qa_salary_after_6_months in equal to salary*2\r",
+                  "pm.test(\"Parameter qa_salary_after_6_months in equal to salary*2\", function () {\r",
+                  "    pm.expect(RespData.qa_salary_after_6_months).to.eql(+ReqData.salary*2)\r",
+                  "});\r",
+                  "\r",
+                  "//Test that parameter qa_salary_after_12_months in equal to salary*2.7\r",
+                  "pm.test(\"Parameter qa_salary_after_12_months in equal to salary*2.7\", function () {\r",
+                  "    pm.expect(RespData.qa_salary_after_12_months).to.eql(+ReqData.salary*2.7)\r",
+                  "});\r",
+                  "\r",
+                  "//Test that parameter qa_salary_after_1.5_year in equal to salary*3.3\r",
+                  "var qa_salary_after_1_5_year = RespData[\"qa_salary_after_1.5_year\"];\r",
+                  "\r",
+                  "pm.test(\"Parameter qa_salary_after_1.5_year in equal to salary*3.3\", function () {\r",
+                  "   pm.expect(qa_salary_after_1_5_year).to.eql(Number(ReqData.salary*3.3))\r",
+                  "});\r",
+                  "\r",
+                  "//Test that parameter qa_salary_after_3.5_years is equal to salary*3.8\r",
+                  "var qa_salary_after_3_5_years = RespData[\"qa_salary_after_3.5_years\"];\r",
+                  "\r",
+                  "pm.test(\"Parameter qa_salary_after_3.5_years is equal to salary*3.8\", function () {\r",
+                  "    pm.expect(qa_salary_after_3_5_years).to.eql(Number(ReqData.salary*3.8))\r",
+                  "});\r",
+                  "\r",
+                  "\r",
+                  "//Test that in parameter person 1 element of u_name is equal to salary\r",
+                  "pm.test(\"In parameter person 1 element of u_name  is equal to salary\", function () {\r",
+                  "    pm.expect(RespData.person.u_name[1]).to.equal(+ReqData.salary)\r",
+                  "});\r",
+                  "\r",
+                  "//Test that parameter u_age is equal to age\r",
+                  "pm.test(\"Parameter u_age is equal to age\", function () {\r",
+                  "    pm.expect(RespData.person.u_age).to.eql(+ReqData.age)\r",
+                  "});\r",
+                  "\r",
+                  "//Test that parameter u_salary_5_years is equal to salary*4.2\r",
+                  "pm.test(\"Parameter u_salary_5_years is equal to salary*4.2\", function () {\r",
+                  "    pm.expect(RespData.person.u_salary_5_years).to.eql(+ReqData.salary*4.2)\r",
+                  "});\r",
+                  "\r",
+                  "/**** Write a loop that will print the list items from the person parameter to the console in order.\r",
+                  "Opt.1*/\r",
+                  "var person_resp = RespData.person \r",
+                  "\r",
+                  "var person_resp = (Object.keys(RespData.person));\r",
+                  "for(var i = 0; i < person_resp.length; i++){\r",
+                  "    console.log(person_resp[i]);\r",
+                  "};\r",
+                  "\r",
+                  "//Opt.2\r",
+                  "var person_resp = RespData.person.u_name;\r",
+                  "for (let i = 0; i < person_resp.length; i ++)  {\r",
+                  "    console.log(\"This is \" + person_resp[i]+ \" element\")\r",
+                  "\r",
+                  "};\r",
+                  ""
+                ],
+                "_lastExecutionId": "15557683-6197-44b4-bff2-51208d504f20"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        "request": {
+          "url": {
+            "protocol": "http",
+            "port": "5006",
+            "path": [
+              "user_info_2"
+            ],
+            "host": [
+              "162",
+              "55",
+              "220",
+              "72"
+            ],
+            "query": [],
+            "variable": []
+          },
+          "header": [
+            {
+              "key": "User-Agent",
+              "value": "PostmanRuntime/7.29.0",
+              "system": true
+            },
+            {
+              "key": "Accept",
+              "value": "*/*",
+              "system": true
+            },
+            {
+              "key": "Cache-Control",
+              "value": "no-cache",
+              "system": true
+            },
+            {
+              "key": "Postman-Token",
+              "value": "cfa86a02-583e-481d-a83a-b3d7f4fff8bd",
+              "system": true
+            },
+            {
+              "key": "Host",
+              "value": "162.55.220.72:5006",
+              "system": true
+            },
+            {
+              "key": "Accept-Encoding",
+              "value": "gzip, deflate, br",
+              "system": true
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive",
+              "system": true
+            },
+            {
+              "key": "Content-Length",
+              "value": "378",
+              "system": true
+            }
+          ],
+          "method": "POST",
+          "body": {
+            "mode": "formdata",
+            "formdata": [
+              {
+                "key": "name",
+                "value": "Mariia",
+                "type": "text"
+              },
+              {
+                "key": "age",
+                "value": "35",
+                "type": "text"
+              },
+              {
+                "key": "salary",
+                "value": "1500",
+                "type": "text"
+              }
+            ]
+          }
+        },
+        "response": {
+          "id": "306db8a4-ed2a-4eda-9fdd-2bb6ac60f4f6",
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "330"
+            },
+            {
+              "key": "Server",
+              "value": "Werkzeug/2.0.1 Python/3.8.10"
+            },
+            {
+              "key": "Date",
+              "value": "Sat, 10 Jun 2023 08:15:07 GMT"
+            }
+          ],
+          "stream": {
+            "type": "Buffer",
+            "data": [
+              123,
+              10,
+              32,
+              32,
+              34,
+              112,
+              101,
+              114,
+              115,
+              111,
+              110,
+              34,
+              58,
+              32,
+              123,
+              10,
+              32,
+              32,
+              32,
+              32,
+              34,
+              117,
+              95,
+              97,
+              103,
+              101,
+              34,
+              58,
+              32,
+              51,
+              53,
+              44,
+              32,
+              10,
+              32,
+              32,
+              32,
+              32,
+              34,
+              117,
+              95,
+              110,
+              97,
+              109,
+              101,
+              34,
+              58,
+              32,
+              91,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              34,
+              77,
+              97,
+              114,
+              105,
+              105,
+              97,
+              34,
+              44,
+              32,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              49,
+              53,
+              48,
+              48,
+              44,
+              32,
+              10,
+              32,
+              32,
+              32,
+              32,
+              32,
+              32,
+              51,
+              53,
+              10,
+              32,
+              32,
+              32,
+              32,
+              93,
+              44,
+              32,
+              10,
+              32,
+              32,
+              32,
+              32,
+              34,
+              117,
+              95,
+              115,
+              97,
+              108,
+              97,
+              114,
+              121,
+              95,
+              53,
+              95,
+              121,
+              101,
+              97,
+              114,
+              115,
+              34,
+              58,
+              32,
+              54,
+              51,
+              48,
+              48,
+              46,
+              48,
+              10,
+              32,
+              32,
+              125,
+              44,
+              32,
+              10,
+              32,
+              32,
+              34,
+              113,
+              97,
+              95,
+              115,
+              97,
+              108,
+              97,
+              114,
+              121,
+              95,
+              97,
+              102,
+              116,
+              101,
+              114,
+              95,
+              49,
+              46,
+              53,
+              95,
+              121,
+              101,
+              97,
+              114,
+              34,
+              58,
+              32,
+              52,
+              57,
+              53,
+              48,
+              46,
+              48,
+              44,
+              32,
+              10,
+              32,
+              32,
+              34,
+              113,
+              97,
+              95,
+              115,
+              97,
+              108,
+              97,
+              114,
+              121,
+              95,
+              97,
+              102,
+              116,
+              101,
+              114,
+              95,
+              49,
+              50,
+              95,
+              109,
+              111,
+              110,
+              116,
+              104,
+              115,
+              34,
+              58,
+              32,
+              52,
+              48,
+              53,
+              48,
+              46,
+              48,
+              48,
+              48,
+              48,
+              48,
+              48,
+              48,
+              48,
+              48,
+              48,
+              48,
+              48,
+              53,
+              44,
+              32,
+              10,
+              32,
+              32,
+              34,
+              113,
+              97,
+              95,
+              115,
+              97,
+              108,
+              97,
+              114,
+              121,
+              95,
+              97,
+              102,
+              116,
+              101,
+              114,
+              95,
+              51,
+              46,
+              53,
+              95,
+              121,
+              101,
+              97,
+              114,
+              115,
+              34,
+              58,
+              32,
+              53,
+              55,
+              48,
+              48,
+              46,
+              48,
+              44,
+              32,
+              10,
+              32,
+              32,
+              34,
+              113,
+              97,
+              95,
+              115,
+              97,
+              108,
+              97,
+              114,
+              121,
+              95,
+              97,
+              102,
+              116,
+              101,
+              114,
+              95,
+              54,
+              95,
+              109,
+              111,
+              110,
+              116,
+              104,
+              115,
+              34,
+              58,
+              32,
+              51,
+              48,
+              48,
+              48,
+              44,
+              32,
+              10,
+              32,
+              32,
+              34,
+              115,
+              116,
+              97,
+              114,
+              116,
+              95,
+              113,
+              97,
+              95,
+              115,
+              97,
+              108,
+              97,
+              114,
+              121,
+              34,
+              58,
+              32,
+              49,
+              53,
+              48,
+              48,
+              10,
+              125,
+              10
+            ]
+          },
+          "cookie": [],
+          "responseTime": 135,
+          "responseSize": 330
+        },
+        "id": "51d9c53a-a264-42c5-be24-1f4caa4bb7b5",
+        "assertions": [
+          {
+            "assertion": "Status code is 200",
+            "skipped": false
+          },
+          {
+            "assertion": "Json response has a parameter start_qa_salary",
+            "skipped": false
+          },
+          {
+            "assertion": "Json response has a parameter qa_salary_after_6_months",
+            "skipped": false
+          },
+          {
+            "assertion": "Json response has a parameter qa_salary_after_12_months",
+            "skipped": false
+          },
+          {
+            "assertion": "Json response has a parameter qa_salary_after_1.5_year",
+            "skipped": false
+          },
+          {
+            "assertion": "Json response has a parameter qa_salary_after_3.5_years",
+            "skipped": false
+          },
+          {
+            "assertion": "Json response has a parameter person",
+            "skipped": false
+          },
+          {
+            "assertion": "Parameter start_qa_salary  in equal to salary",
+            "skipped": false
+          },
+          {
+            "assertion": "Parameter qa_salary_after_6_months in equal to salary*2",
+            "skipped": false
+          },
+          {
+            "assertion": "Parameter qa_salary_after_12_months in equal to salary*2.7",
+            "skipped": false
+          },
+          {
+            "assertion": "Parameter qa_salary_after_1.5_year in equal to salary*3.3",
+            "skipped": false
+          },
+          {
+            "assertion": "Parameter qa_salary_after_3.5_years is equal to salary*3.8",
+            "skipped": false
+          },
+          {
+            "assertion": "In parameter person 1 element of u_name  is equal to salary",
+            "skipped": false
+          },
+          {
+            "assertion": "Parameter u_age is equal to age",
+            "skipped": false
+          },
+          {
+            "assertion": "Parameter u_salary_5_years is equal to salary*4.2",
+            "skipped": false
+          }
+        ]
+      }
+    ],
+    "transfers": {
+      "responseTotal": 873
+    },
+    "failures": [],
+    "error": null
+  }
+}

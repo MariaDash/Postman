@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Postman 1" tests="7" time="1.003">
+  <testsuite name="EP_1_get_method" id="242b5b6d-8a3e-4499-a9b1-e58c7a58ea65" timestamp="2023-06-10T08:40:14.574Z" tests="1" failures="0" errors="0" time="0.212">
+    <testcase name="Status code is 200" time="0.212" classname="Postman1"/>
+  </testsuite>
+  <testsuite name="EP_2_user_info_3" id="73a766c2-7236-4829-b07b-54583d3b1d27" timestamp="2023-06-10T08:40:14.574Z" tests="1" failures="0" errors="0" time="0.152">
+    <testcase name="Status code is 200" time="0.152" classname="Postman1"/>
+  </testsuite>
+  <testsuite name="EP_3_object_info_1" id="2e205b5a-2f7d-4897-8e32-28b55c232de9" timestamp="2023-06-10T08:40:14.574Z" tests="1" failures="0" errors="0" time="0.134">
+    <testcase name="Status code is 200" time="0.134" classname="Postman1"/>
+  </testsuite>
+  <testsuite name="EP_4_object_info_2" id="ee1a09da-3891-4478-912e-d4f1e494a380" timestamp="2023-06-10T08:40:14.574Z" tests="1" failures="0" errors="0" time="0.128">
+    <testcase name="Status code is 200" time="0.128" classname="Postman1"/>
+  </testsuite>
+  <testsuite name="EP_5_object_info_3" id="0f6cd6c3-e7c5-4ce3-8ac4-ff62bdbc5ebc" timestamp="2023-06-10T08:40:14.574Z" tests="1" failures="0" errors="0" time="0.124">
+    <testcase name="Status code is 200" time="0.124" classname="Postman1"/>
+  </testsuite>
+  <testsuite name="EP_6_object_info_4" id="6d84dd1d-8532-4d22-9dc7-2893396292d5" timestamp="2023-06-10T08:40:14.574Z" tests="1" failures="0" errors="0" time="0.111">
+    <testcase name="Status code is 200" time="0.111" classname="Postman1"/>
+  </testsuite>
+  <testsuite name="EP_7_user_info_2" id="b82a3c37-cb60-4d03-b3e2-7a6af8ec099e" timestamp="2023-06-10T08:40:14.574Z" tests="1" failures="0" errors="0" time="0.142">
+    <testcase name="Status code is 200" time="0.142" classname="Postman1"/>
+  </testsuite>
+</testsuites>
