@@ -173,7 +173,15 @@ Save request and send it.
 See the result:
 
 ![first](https://github.com/MariaDash/Postman/blob/main/Postman2_pics/Pict1.PNG)
-
+```
+* Parsing response
+Opt.1: const jsonData = pm.response.json();
+Opt.2: const jsonResp = JSON.parse(responseBody);
+Parsing request
+Opt.1 [body > form-data]: const reqData = request.data;
+Opt.2 [params]: const reqData = pm.request.url.query.toObject();
+Opt.3 [[body > raw> json]: const jsonReq = JSON.parse(request.data)
+```
 ## 2. POST request endpoint /user_info_3
 ### 1. *Send a request*
 
