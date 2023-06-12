@@ -1,11 +1,13 @@
-# [Homework 2 Postman](https://github.com/MariaDash/Postman/blob/main/Homework2.md#homework-2)
-+ [1. GET request endpoint /first](https://github.com/MariaDash/Postman/blob/main/Homework2.md#1-get-request-endpoint-first)
+# [Homework 2 Postman](https://github.com/MariaDash/Postman/blob/main/Homework/Homework2.md#homework-2-postman)
++ [1. GET request endpoint /first](https://github.com/MariaDash/Postman/blob/main/Homework/Homework2.md#1-get-request-endpoint-first)
 
-    [— 1. Send a request](https://github.com/MariaDash/Postman/blob/main/Homework2.md#1-send-a-request)
+    [— 1. Send a request](https://github.com/MariaDash/Postman/blob/main/Homework/Homework2.md#1-send-a-request)
     
-    [— 2. Receive Status code 200 response](https://github.com/MariaDash/Postman/blob/main/Homework2.md#2-receive-status-code-200-response)
+    [— 2. Receive Status code 200 response](https://github.com/MariaDash/Postman/blob/main/Homework/Homework2.md#2-receive-status-code-200-response)
     
-    [— 3. Test that there is a correct string in the body](https://github.com/MariaDash/Postman/blob/main/Homework2.md#3-test-that-there-is-a-correct-string-in-the-body)
+    [— 3. Test that there is a correct string in the body](https://github.com/MariaDash/Postman/blob/main/Homework/Homework2.md#3-test-that-there-is-a-correct-string-in-the-body)
+    
++ [Parsing](https://github.com/MariaDash/Postman/blob/main/Homework/Homework2.md#parsing)
 
 + [2. POST request endpoint /user_info_3](https://github.com/MariaDash/Postman/blob/main/Homework2.md#2-post-request-endpoint-user_info_3)
 
