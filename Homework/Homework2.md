@@ -37,7 +37,7 @@ Opt.1 [body > form-data]: `const reqData = request.data;`
 
 Opt.2 [params]: `const reqData = pm.request.url.query.toObject();`
 
-Opt.3 [[body > raw> json]: `const jsonReq = JSON.parse(request.data)`
+Opt.3 [body > raw> json]: `const jsonReq = JSON.parse(request.data)`
 
 
 ## 2. POST request endpoint /user_info_3
