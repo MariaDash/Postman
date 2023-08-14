@@ -10,4 +10,4 @@ Doing simple tests including simple loops
 
 JSON Schema validations, simple tests and interesting loops including sendRequest usage
 # [Postman Additional repository](https://github.com/MariaDash/Postman_additional)
-Working fully with autotests for different types of objects  and situations in need with use of different libraries and sniffers
+Working fully with autotests for different types of objects  and situations in need with use of different libraries and snippets
