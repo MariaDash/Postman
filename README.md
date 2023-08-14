@@ -9,3 +9,5 @@ Doing simple tests including simple loops
 # [Homework 3 Postman](https://github.com/MariaDash/Postman/blob/main/Homework/Homework3.md#homework-3-postman)
 
 JSON Schema validations, simple tests and interesting loops including sendRequest usage
+# [Postman Additional repository](https://github.com/MariaDash/Postman_additional)
+Working fully with autotests for different types of objects  and situations in need with use of different libraries and sniffers
