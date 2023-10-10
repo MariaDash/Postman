@@ -1,4 +1,4 @@
-# Installing newman
+# Installing Newman
 ## 1. install node.js
 ## in Command Line check:
 ```
