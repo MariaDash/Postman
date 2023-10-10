@@ -1,4 +1,4 @@
-# [Homework 3 Postman](https://github.com/MariaDash/Postman/blob/main/Homework/Homework3.md#homework-3-postman)
+# Postman Autotests Part 3
     
 ## 1. Post request endpoint /login
 Need to log in.
