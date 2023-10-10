@@ -1,4 +1,4 @@
-# [Homework 1 Postman](https://github.com/MariaDash/Postman/blob/main/Homework/Homework1.md#homework-1-postman)
+# Postman Autotests Part 1
  
 
 ## 1. GET request endpoint /get_method
