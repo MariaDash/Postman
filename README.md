@@ -1,13 +1,15 @@
-# [Homework 1 Postman](https://github.com/MariaDash/Postman/blob/main/Homework/Homework1.md#homework-1-postman)
+# [Postman Autotests Part 1](https://github.com/MariaDash/Postman/blob/main/Postman%20Autotests/Postman%20Autotests%20Part%201.md)
 
 Simply sending different requests
 
-# [Homework 2 Postman](https://github.com/MariaDash/Postman/blob/main/Homework/Homework2.md#homework-2-postman)
+# [Postman Autotests Part 2](https://github.com/MariaDash/Postman/blob/main/Postman%20Autotests/Postman%20Autotests%20Part%202.md)
 
 Doing simple tests including simple loops   
  
-# [Homework 3 Postman](https://github.com/MariaDash/Postman/blob/main/Homework/Homework3.md#homework-3-postman)
+# [Postman Autotests Part 3](https://github.com/MariaDash/Postman/blob/main/Postman%20Autotests/Postman%20Autotests%20Part%203.md)
 
 JSON Schema validations, simple tests and interesting loops including sendRequest usage
+# [Working with Newman](https://github.com/MariaDash/Postman/blob/main/Postman%20Autotests/Working%20with%20Newman.md)
+
 # [Postman Additional repository](https://github.com/MariaDash/Postman_additional)
 Working fully with autotests for different types of objects  and situations in need with use of different libraries and snippets
