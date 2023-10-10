@@ -1,4 +1,5 @@
 # Postman Autotests
+## [Environments](https://github.com/MariaDash/Postman/tree/main/Environments)
 ## [Postman Autotests Part 1](https://github.com/MariaDash/Postman/blob/main/Postman%20Autotests/Postman%20Autotests%20Part%201.md)
 
 Simply sending different requests
