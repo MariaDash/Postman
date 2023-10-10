@@ -12,5 +12,7 @@ Doing simple tests including simple loops
 JSON Schema validations, simple tests and interesting loops including sendRequest usage
 ## [Working with Newman](https://github.com/MariaDash/Postman/blob/main/Postman%20Autotests/Working%20with%20Newman.md)
 Creating reports,  running Postman tests in CLI
+## [Newman Reports in JSON, XML](https://github.com/MariaDash/Postman/tree/main/Newman%20reports)
+## [Newman Reports in HTML](https://github.com/MariaDash/Postman/tree/main/Newman%20reports%20html)
 ## [Postman Additional repository](https://github.com/MariaDash/Postman_additional)
 Working fully with autotests for different types of objects  and situations in need with use of different libraries and snippets
